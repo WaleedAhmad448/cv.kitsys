@@ -1,0 +1,43 @@
+ <!--ko if:$data.ukSortableHandle-->
+ <div class="uk-width-auto" style="align-self: center;">
+    <span data-bind="attr:{class:('uk-sortable-handle uk-margin-small-right uk-margin-small-left uk-text-center '+$data.ukSortableHandle)}" uk-icon="icon: table"></span>
+  </div>
+  <!--/ko-->
+<!-- <kit-item-icon class="uk-width-1-1" params="data:$data"></kit-item-icon> -->
+<div class="uk-width-expand" style="align-self: center; text-align: center;" >
+    <!--ko using:$data.sLabel-->
+    <!--ko if:isEditMode-->
+    
+    <input type="text" class="uk-input" data-bind="value:val">
+    <label >
+        <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+       
+        
+    </label>
+    <!--/ko-->
+    <!--ko ifnot:isEditMode-->
+    <span  class="head-icon m-1" uk-icon="info" ></span>
+    <span data-bind="html:val"></span>
+    <label >
+        <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+        <span class="head-edit" uk-icon="pencil" ></span>
+    </label>
+    
+    <!--/ko-->
+    <!--/ko-->
+</div>
+<div class="uk-width-auto" style="align-self: center;">
+    <!--ko using:$data.sLabel-->
+    <!--ko if:isEditMode-->
+    <label >
+        <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+        <a class="uk-icon-button" uk-icon="check"></a>
+        <a class="uk-icon-button" uk-icon="refresh" data-bind="click:rest"></a>
+    </label>
+    <!--/ko-->
+   
+    <!--/ko-->
+    <!--ko if:isDestroyable-->
+    <a class="uk-icon-button" uk-icon="trash" data-bind="click:remove"></a>
+    <!--/ko-->
+</div>

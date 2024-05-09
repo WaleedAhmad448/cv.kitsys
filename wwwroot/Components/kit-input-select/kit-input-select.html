@@ -1,0 +1,10 @@
+<!--ko if:visible-->
+<base-kit-item data-bind="attr:{class:(ko.UiClassBaseKitItem() +' '+ $data.grid)}" params="data:$data">
+<select class="uk-select" data-bind="value:value">
+    <!--ko foreach:getOptions()-->
+    <option data-bind="value:value,html:ko.vm.is_arabic()? ar:en">
+    </option>
+    <!--/ko-->
+</select>
+</base-kit-item>
+<!--/ko-->

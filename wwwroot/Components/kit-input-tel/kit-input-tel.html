@@ -1,0 +1,19 @@
+<!--ko if:visible-->
+<base-kit-item data-bind="attr:{class:(ko.UiClassBaseKitItem() +' '+ $data.grid)}" params="data:$data">
+  <!--ko ifnot:$data.isMultiVal-->
+  
+  <input class="uk-input" type="tel" data-bind="value:value" />
+  <!--/ko-->
+  <!--ko if:$data.isMultiVal-->
+  <!--ko foreach:{data:values,as:'val'}-->
+  <div class="uk-flex uk-width-1-1">
+    <input class="uk-input" type="tel" data-bind="value:$data.val">
+    <button type="button" class="uk-icon-button uk-icon uk-margin-small-left uk-margin-small-right"  
+    uk-icon="icon: trash"
+    data-bind="click:function(){if($component.removeVal)$component.removeVal($data);else{$parent.values.remove($data);}}"></button>
+    
+  </div>
+  <!--/ko-->
+  <!--/ko-->
+</base-kit-item>
+<!--/ko-->

@@ -1,0 +1,10 @@
+<div class="col-md-12 row">
+    <h3 class="col-md-12" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? ar:en"></h3>
+    <button data-bind="click:loadRows">Get Rows</button>
+    <button data-bind="click:addNew">Add New</button>
+    
+    
+    <table class="table table-hover" id="ko-model" data-bind="datatable_v1: rows"> 
+          </button>
+    </table>
+</div>

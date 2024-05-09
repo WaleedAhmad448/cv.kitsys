@@ -1,0 +1,125 @@
+<!--ko if:visible-->
+<div class="row" data-bind="visible:visible">
+  <div class="col-12 m-1">
+
+    <div class="card">
+      <div class="card-header" style="text-align:start" id="headingOne2" data-bind="attr:{id:(uniqueUiId+'-head')}">
+        <div uk-grid>
+          <!--ko if:$data.ukSortableHandle-->
+          <div class="uk-width-auto" style="align-self: center;">
+            <span data-bind="attr:{class:('uk-sortable-handle uk-margin-small-right uk-text-center '+$data.ukSortableHandle)}" uk-icon="icon: table"></span>
+          </div>
+          <!--/ko-->
+          <div class="uk-width-expand">
+            <!--kof if:editMode-->
+
+           
+            <input class="uk-input uk-form-blank uk-form-width-large" type="text" data-bind="value:$data.label"/>
+            
+            <!--/kof-->
+            <!--kof ifnot:editMode--
+            <span data-bind="html:$data.label"></span>
+            !--/ko-->
+          </div>
+          
+          <div class="uk-width-auto" style="display: flex;">
+            <button class="uk-button uk-button-link" type="button"><span uk-icon="icon: settings"></span></button>
+          <div uk-dropdown="mode: click">
+              <ul class="uk-nav uk-dropdown-nav">
+                <!--ko foreach:$data.actions-->
+                <li><a data-bind="html:label,click:$data.click"></a></li>
+                <!--/ko-->
+                <li class="uk-nav-divider"></li>
+                <li><a><span uk-icon="icon: pencil"></span> <span>Edit Title</span></a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a><span uk-icon="icon: trash"></span> <span>Remove</span></a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a><span uk-icon="icon: copy"></span> <span>Duplicate</span></a></li>
+                <li class="uk-nav-divider"></li>
+              </ul>
+          </div>
+            <button class="btn btn-link btn-block" type="button"
+            data-bind="attr:{'data-target':('#'+uniqueUiId+'-collapse'),'aria-controls':(uniqueUiId+'-collapse')}"
+            data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+              <span class="fe-chevron-down"></span>
+            </button>
+          </div>
+        </div>
+        <h2 class="mb-0">
+
+         
+        </h2>
+      </div>
+
+        <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-bind="attr:{'id':(uniqueUiId+'-collapse'),'aria-labelledby':(uniqueUiId+'-head')}"  >
+          <div class="card-body row">
+            <!--ko if:$data.isSortable-->
+            <!--ko component:{name:'kit-sortable-group',params:{data:{visible:$data.visible,items:$data.items}}}-->
+            <!--/ko-->
+            <!--/ko-->
+            <!--ko ifnot:$data.isSortable-->
+            <!--ko foreach:items-->
+            <!--ko if:$data.optional&&$data.optional()<2-->
+              <div data-bind="attr:{class:($data.grid+' animate__animated animate__fadeIn')}">
+                <div class="row">
+                  <div class="uk-width-expand">
+                    <!--ko component:{name:componentName,params:{data:{...$data,grid:'col-12'}}}-->
+                    <!--/ko-->
+                    
+                  </div>
+                  <!--ko if:$data.optional&&$data.optional()==1-->
+                  
+                  <div class="uk-width-auto">
+                    <button class="btn btn-link btn-block" type="button" data-bind="click:function(){ $data.optional(2);}">
+                      <span class="fe-trash"></span>
+                    </button>
+                  </div>
+                  <!--/ko-->
+                   <!--ko if:$data.isCustom&&$data.canRemove-->
+                  
+                   <div class="uk-width-auto">
+                    <button class="btn btn-link btn-block" type="button" data-bind="click:function(){ $parent.items.remove($data);}">
+                      <span class="fe-trash"></span>
+                    </button>
+                  </div>
+                  <!--/ko-->
+             </div>
+          </div>
+          <!--/ko-->
+          <!--/ko-->
+          <!--/ko-->
+          </div>
+          <div class="card-footer text-muted">
+            <div class="uk-grid-flex" uk-grid>
+               <!--ko foreach:items-->
+          <!--ko if:$data.optional&&$data.optional()==2-->
+          
+          <div class="uk-width-auto animate__animated">
+            
+            <button class="btn btn-outline-info btn-sm" data-bind="click:function(){ $data.optional(1);}">
+              <span> +</span>
+              <span style='margin: .5rem;' data-bind="html:ar"></span>
+            </button>
+            
+          </div>
+          <!--/ko-->
+          <!--/ko-->
+          
+          <!--ko if:$data.config&&$data.config.canAdd&&$data.config.canAdd()-->
+          <div class="uk-width-auto animate__animated">
+            
+            <button class="btn btn-outline-info btn-sm" data-bind="click:$data.config.createCustom">
+              <span> +</span>
+              <span style='margin: .5rem;'>اضافة حقل مخصص</span>
+            </button>
+            
+          </div>
+          <!--/ko-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+</div>
+<!--/ko-->

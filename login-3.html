@@ -1,0 +1,267 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/font-awesome/css/fontawesome.min.css"rel="stylesheet"/>        
+        <meta charset="utf-8"/>
+        <style>
+            body{
+                -webkit-transition: background-color 1s ease-out;
+                -moz-transition: background-color 1s ease-out;
+                -o-transition: background-color 1s ease-out;
+                transition: background-color 1s ease-out;
+            }
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+
+            }
+            .row{
+                width: 100%;
+            }
+            .validationMessage{
+                color:darkred;
+                font-weight: bold;
+            }
+            
+            </style>
+        <script>
+            if (localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.getElementById("html").classList.add("bg-dark");
+                document.getElementById("html").classList.add("uk-light");
+                //comment
+                //edit
+            }
+        </script>
+    </head>
+    <body data-bind="attr:{style:ko.vm.colorPalette.getStyle()}">
+        
+
+        <style>
+            .kit-uk-sticky-left{
+                left: 1rem;
+            }
+            .kit-uk-sticky-right{
+                right: 1rem;
+            }
+        </style>
+        <div data-bind="css:{'kit-uk-sticky-left':!ko.vm.is_arabic(),'kit-uk-sticky-right':ko.vm.is_arabic()}" style="z-index: 980;position: fixed;bottom: 1rem;">
+             
+            <label class="uk-icon-button"  data-bind="css:{'bg-dark':!ko.vm.is_dark()}">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span class="fe-globe" data-bind="attr:{'uk-tooltip':is_arabic()?'En':'ع'}"></span>
+            </label>
+            <br/>
+            <label class="uk-icon-button"  data-bind="css:{'bg-dark':!ko.vm.is_dark()}">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="css:{'fe-sun':is_dark,'fe-moon':!is_dark()},attr:{'uk-tooltip':(is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم'))}"></span>
+            </label>
+        </div>
+        <div class="row uk-height-1-1" style="background-image: url(/wwwroot/images/d.webp);"> 
+            <div class="kit-login-card uk-light uk-position-center uk-padding-small">
+                
+                <div class="uk-width-medium">
+                    <div class="row col-12">
+
+                        <div>
+                            <img src="/wwwroot/images/cover_2.jpg"/>
+                        </div>
+                        <div class="kit-login-card-img2 css-xywsec">
+                            
+                            <img src="/wwwroot/images/logo.png"  >
+                        </div>
+                        <div class="kit-login-card-img">
+                            
+                            <img src="/wwwroot/images/logo.png"  >
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+
+                            <div class="color-palette">
+                                <span class="color-palette-1"></span>
+                                <span class="color-palette-2"></span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+
+                            <div class="color-palette" style="--color-palette-1: #c38989;--color-palette-2: black;">
+                                <span class="color-palette-1"></span>
+                                <span class="color-palette-2"></span>
+                            </div>
+                        </div>
+                        </div>
+                        <style>
+                            .color-palette{
+                                --color-palette-1:red;
+                                --color-palette-2:black;
+                                height: 5rem;
+                                width: 5rem;
+                                background-color: var(--color-palette-1) ;
+                                border-radius: 4rem;
+                                max-width: 5rem;
+                                max-height: 5rem;
+                                position: relative;
+                                overflow: hidden;
+                                border-radius: 50%;
+                                position: relative;
+
+                            }
+                            .palette-active .color-palette-2 {
+                                transform: rotate(50deg);
+                            }
+                            .color-palette-2{
+                                top: 0px;
+                                bottom: 0px;
+                                right: 0px;
+                                margin: auto;
+                                width: 50%;
+                                height: 120%;
+                                position: absolute;
+                                border-radius: 50%;
+                                background-color: var(--color-palette-2);
+                                transform-origin: left center;
+                                transform: rotate(25deg);
+                                transition: transform 375ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+                            }
+                           
+                        </style>
+                    </div>
+                    <style>
+                        .kit-login-card-img{
+                            width: 100%;
+                            text-align: center;
+                            object-fit: cover;
+                            object-position: left;
+                            position: absolute;
+                            top: -2rem;
+                            
+                        margin-right: -15px;
+                        margin-left: -15px;
+                            
+                        }
+                        .kit-login-card-img img{
+                            background: black;
+                            border-radius: 2.5rem;
+                            height: 4rem;
+                            width: 4rem;
+                            padding: .5rem;
+                            object-fit: cover;
+                            object-position: left;
+                            
+                        }
+                        .kit-login-card-img2{
+                            /* width: 100%;
+                            text-align: center;
+                            object-fit: cover;
+                            object-position: left;
+                            /* position: absolute; */
+                            /* top: -2rem;
+                            margin-top: -1rem;
+                        margin-right: -15px;
+                        margin-left: -15px;  */
+                            
+                        }
+                        .css-xywsec {
+    width: 144px;
+            height: 62px;
+            display: inline-block;
+            background-color: currentcolor;
+            -webkit-mask: url("https://minimal-assets-api.vercel.app/assets/icons/shape-avatar.svg") center center / contain no-repeat;
+            z-index: 10;
+            left: 0px;
+            right: 0px;
+            bottom: -26px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            color:rgb(0 0 0 / 75%);
+            color: rgb(255, 255, 255);
+            
+}
+.css-1mpoie5 {
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    width: 50%;
+    height: 120%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(0, 220, 218);
+    transform-origin: left center;
+    transform: rotate(25deg);
+}
+                        .kit-login-card-img2 img{
+                            background: black;
+                            border-radius: 2.5rem;
+                            height: 4rem;
+                            width: 4rem;
+                            padding: .5rem;
+                            object-fit: cover;
+                            object-position: left;
+                            
+                        }
+                    </style>
+                    
+                    <div class="uk-margin">
+                        <h5>Sign in</h5>
+                        <!-- <h5 class="text-mute">Wellcome Back</h5> -->
+                    </div>
+                    <div>
+                        <div class="uk-margin">
+                            <div class="uk-inline uk-width-1-1">
+                                <span class="uk-form-icon" data-bind="css:{'uk-form-icon-flip':ko.vm.is_arabic}" uk-icon="icon: user"></span>
+                                <input class="uk-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline  uk-width-1-1">
+                                <span class="uk-form-icon" data-bind="css:{'uk-form-icon-flip':ko.vm.is_arabic}" uk-icon="icon: lock"></span>
+                                <input class="uk-input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-default uk-width-1-1">
+                                <span class="uk-form-icon" data-bind="css:{'uk-form-icon-flip':ko.vm.is_arabic}" uk-icon="icon: login"></span>
+                                <span> login
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .kit-login-card {
+                    backdrop-filter: blur(16px) saturate(180%);
+                    -webkit-backdrop-filter: blur(16px) saturate(180%);
+                    background-color: rgba(17, 25, 40, 0.75);
+                    background-color: rgb(0 0 0 / 75%);
+                    background-color: #fff;
+                    border-radius: 12px;
+                    border: 1px solid rgba(255, 255, 255, 0.125);
+                    text-align: center;
+                }
+                .kit-login-card button,.kit-login-card input{
+                    border-radius: 2rem;
+                }
+            </style>
+        </div>
+       
+        
+    </body>
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script src="./wwwroot/lib/uikit/js/uikit.min.js"></script>
+    <script src="./wwwroot/lib/uikit/js/uikit-icons.min.js"></script>
+    <script src="./wwwroot/lib/require.js/require.min.js"></script>
+    <script>
+        const URLBase = './wwwroot/';
+        const URLComponent = URLBase+"Components/";
+        const URLLib2Component = '../Components/';
+        const URLLibs = URLBase + "lib/";
+        const URLApi = "/api/";
+        const page = window.location.search.slice(1).split("&").map(q=>q.split('=')).reduce((a,b)=>{a[b[0]]=b[1];  return a},{page:"login"}).page;
+    </script>
+    <script src="./wwwroot/Components/init.js"></script>
+</html>

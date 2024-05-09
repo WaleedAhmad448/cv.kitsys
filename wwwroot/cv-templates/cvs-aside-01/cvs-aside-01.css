@@ -1,0 +1,26 @@
+.cvs-aside-01{
+    margin-top: calc(-140px*var(--tcv-08-paper-size));
+    padding: 0rem;
+    
+}
+.cvs-aside-01-cover{
+    padding: calc(calc(var(--tcv-08-aside-img) - var(--tcv-08-aside-img-size))/2);
+    width: var(--tcv-08-aside-img);
+    
+    border: 5px solid var(--tcv-current-color-02-fg);
+    background-color: var(--tcv-current-color-02-bg);
+    border-radius:calc(var(--tcv-08-aside-img)/2);
+}
+.cvs-aside-01-img{
+    text-align: center;
+}
+.cvs-aside-01-img img{
+    border-radius: calc(var(--tcv-08-aside-img)/2);
+
+    
+    width:var(--tcv-08-aside-img-size);
+    height: var(--tcv-08-aside-img-size); 
+    /* height: 240px; */
+    border: 3px solid var(--tcv-current-color-02-fg);
+    margin: auto;
+}

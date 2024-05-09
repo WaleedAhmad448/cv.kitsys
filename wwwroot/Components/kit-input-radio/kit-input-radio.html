@@ -1,0 +1,15 @@
+<!--ko if:visible-->
+<div class="row m-1">
+    <div class="col-md-3">
+        <span data-bind="html:ko.vm.is_arabic()? ar:en"></span>
+    </div>
+    <div class="col-md-9" style="text-align: start;" >
+        <!--ko foreach:getOptions()-->
+        <label>
+            <input class="uk-radio" type="radio" data-bind="checked:$parent.value,checkedValue:value" />
+            <span data-bind="html:ko.vm.is_arabic()? ar:en"></span>
+        </label>
+        <!--/ko-->
+    </div>
+</div>
+<!--/ko-->

@@ -1,0 +1,19 @@
+<!--ko if:visible-->
+<div data-bind="attr:{class:($data.grid||'col-12')+' p-0'}">
+<div class="row" data-bind="uksortable:$data">
+  
+  <div class="col-12 p-0" 
+  data-bind="attr:{'id':uniqueUiId,'uk-sortable':('group: '+uniqueUiId+'; handle: .uk-sortable-'+uniqueUiId)}">
+    <!--ko foreach:items -->
+    <div class="uk-margin">
+
+ <div class="row">
+    <!--ko component:{name:componentName,params:{data:{...$data,ukSortableHandle:('uk-sortable-'+$parent.uniqueUiId)}}}-->
+    <!--/ko-->
+  </div>
+</div>
+    <!--/ko-->
+</div>
+</div>
+</div>
+<!--/ko-->

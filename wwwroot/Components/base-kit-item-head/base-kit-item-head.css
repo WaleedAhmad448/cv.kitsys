@@ -1,0 +1,12 @@
+.head-edit{
+    cursor: pointer;
+    opacity: .3;
+}
+.head-edit:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+.head-icon{
+    opacity: .7;
+    cursor: pointer;
+}

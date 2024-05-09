@@ -1,0 +1,259 @@
+
+:root{
+    --tcv-08-paper-size:4.168067226890756;
+    --tcv-08-paper-ssize:4.168067226890756;
+    --tcv-08-paper-ssize:1;
+    --tcv-08-paper-msize:1;
+    
+    --tcv-08-paper-msize:4.168067226890756;
+    --tcv-08-paper-msize:3;
+    --tcv-08-paper-size:4;
+    --tcv-08-paper-size:2;
+    --tcv-08-aside-img-size:calc(160.848px*var(--tcv-08-paper-size));
+    --tcv-08-aside-img:calc(185.819px*var(--tcv-08-paper-size));
+    --tcv-08-header-h:calc(159.819px*var(--tcv-08-paper-size));
+    --tcv-08-footer-h:calc(8px*var(--tcv-08-paper-size));
+    --template-cv-08-margin: calc(8px*var(--tcv-08-paper-size));
+    /* font-size: calc(16px*var(--tcv-08-paper-size)); */
+}
+.template-cv-08{
+    width: calc(595px*var(--tcv-08-paper-size));
+    width: calc(580px*var(--tcv-08-paper-size));
+    /* height: calc(824px*var(--tcv-08-paper-size)); */
+    max-height: calc(842px*var(--tcv-08-paper-size));
+    min-height: calc(824px*var(--tcv-08-paper-size));
+    margin: var(--template-cv-08-margin);
+    /* margin-bottom: var(--tcv-08-footer-h); */
+    /* height: calc(752px*var(--tcv-08-paper-size));
+    max-height: calc(752px*var(--tcv-08-paper-size)); */
+    /* height: var(--tcv-08-paper-ssize); */
+    /* background-color: gray; */
+}
+.tcv-08-header{
+    background-color: var(--tcv-current-color-01-bg);
+    color: var(--tcv-current-color-01-fg);
+    height: var(--tcv-08-header-h);
+}
+.tcv-08-aside-and-body{
+    min-height: calc(100% - calc(64px + var(--tcv-08-header-h) + var(--tcv-08-footer-h)) + calc( var(--template-cv-08-margin) * 2));
+}
+.tcv-08-header *{
+    color: var(--tcv-current-color-01-fg);
+    
+}
+.tcv-08-header{
+    display: flex;
+
+}
+
+.tcv-08-header .persnoal-info{
+    align-self: end;
+    text-align: start;
+    /* margin-left: 34%; */
+}
+.tcv-08-aside{
+    padding: 1rem;
+
+}
+.tcv-08-aside-img-foot,.tcv-08-aside-img-body,.tcv-08-aside-img-head{
+    width: var(--tcv-08-aside-img);
+    
+    border: 5px solid var(--tcv-current-color-02-fg);
+    background-color: var(--tcv-current-color-02-bg);
+
+}
+.tcv-08-aside-img-foot,.tcv-08-aside-img-head{
+    height: var(--tcv-08-aside-img);
+}
+.tcv-08-aside-img-body{
+    border-top: none;
+    border-bottom:none;
+    margin-top: -2px;
+    margin-bottom: 4px;
+}
+.tcv-08-aside-img-head {
+    width:var(--tcv-08-aside-img);
+    height: var(--tcv-08-aside-img); 
+    border-bottom: none;
+    /* padding: 16px; */
+    margin-top: calc(-140px*var(--tcv-08-paper-size));
+    border-radius: 100% 100% 0 0;
+    /* height: 44rem; */
+    background-color: var(--tcv-current-color-02-bg);
+    color: var(--tcv-current-color-02-fg);
+    text-align: center;
+    padding-top:calc(calc(var(--tcv-08-aside-img) - var(--tcv-08-aside-img-size))/2);
+}
+.tcv-08-aside-img-foot {
+    /* width: 100%; */
+    /* height: 282px; */
+    border: 5px solid var(--tcv-current-color-02-fg);
+    border-top: none;
+    padding: 16px;
+    /* margin-top: 16px; */
+    border-radius:0 0 100% 100%;
+    /* height: 44rem; */
+    background-color: var(--tcv-current-color-02-bg);
+    color: var(--tcv-current-color-02-fg);
+    text-align: center;
+    
+    margin-top: calc(-100px*var(--tcv-08-paper-size));
+}
+
+.tcv-08-aside-img img{
+    border-radius: 100%;
+
+    
+    width:var(--tcv-08-aside-img-size);
+    height: var(--tcv-08-aside-img-size); 
+    /* height: 240px; */
+    border: 3px solid var(--tcv-current-color-02-fg);
+}
+.tcv-08-stitle {
+    background: var(--tcv-current-color-01-bg);
+    color: var(--tcv-current-color-01-fg);
+    display: inline;
+    padding: .5em 1.5em .5em 1.5em;
+    border-radius: 0 16px 16px 0;
+    text-transform: uppercase;
+}
+.dir-right .tcv-08-stitle{
+    border-radius: 16px 0 0 16px;
+
+}
+.tcv-08-stline {
+    padding: 1rem;
+}
+
+.tcv-08-stline-item {
+    display: flex;
+    padding: 0;
+    padding-bottom: 1rem;
+    /* border-left: 2px solid var(--tcv-current-color-01-bg); */
+    border-right:none;
+    margin-bottom:-1rem ;
+}
+.dir-right .tcv-08-stline-item{
+    border-right: 2px solid var(--tcv-current-color-01-bg);
+    border-left:none;
+}
+.tcv-08-stline-year{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.tcv-08-stline-item:last-child{
+    border: none;
+    
+}
+.foo.tcv-08-stline-item::before{
+    content: '';
+    font-size: 1.5rem;
+    position: absolute;
+    /* margin-left: -1.5rem; */
+    
+    background-color: var(--tcv-current-color-01-bg);
+    border:12px solid var(--tcv-current-color-01-bg);
+    color: var(--tcv-current-color-01-fg);
+    border-radius: 1rem;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    left: -.80rem;
+    /* margin-top: .25rem; */
+    /* top: 1rem; */
+    /* top: -0.45rem; */
+    text-align: center;
+    
+}
+
+.tcv-08-stline-title{
+    color: var(--tcv-current-color-02-fg);
+
+}
+.tcv-08-stline-majorName{
+    font-weight: bold;
+}
+.tcv-08-level-item-rate{
+    color: var(--tcv-current-color-02-fg);
+}
+.tcv-08-level-item-rate span{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.tcv-08-level-item-rate span:last-child{
+    filter: grayscale(1);
+}
+.tcv-08-row{
+    width: 100%;
+    display: flex;
+}
+.tcv-08-col-4{
+    width: 33.333%;
+}
+.tcv-08-width-expand{
+    flex: 1;
+}
+.tcv-08-stline-item{
+    position: relative;
+}
+.tcv-08-flex{
+    display: flex;
+}
+
+.tcv-08-stline-point {
+position: relative;
+text-align: center;
+padding-top: 3px;
+}
+.tcv-08-stline-item:last-child .tcv-08-stline-point > span:last-child{
+    display: none;
+    
+}
+.tcv-08-stline-point >span:first-child  {
+display: block;
+width: 16px;
+height: 16px;
+background-color: var(--tcv-current-color-01-bg);
+border-radius: 50%;
+margin: 2px;
+}
+.tcv-08-stline-point > span:last-child {
+display: block;
+width: 3px;
+height: 100%;
+background-color: var(--tcv-current-color-01-bg);
+margin: auto;
+margin-top: -5px;
+opacity: .75;
+}
+.template-cv-08 .persnoal-info-01{
+min-width: 200px;
+display: grid;
+margin: 16px;
+text-transform: uppercase;
+}
+.template-cv-08 .persnoal-info-01 .person-name{
+font-weight: bolder;
+font-size: 3em;
+}
+.person-name-divider {
+width: 100%;
+height: 3px;
+background-color: var(--tcv-current-color-01-fg);
+}
+.template-cv-08 .persnoal-info-01 .major-name{
+font-weight: bolder;
+font-size: 2em;
+opacity: .75;
+
+}
+.tcv-08-footer{
+    height: var(--tcv-08-footer-h);
+    background: var(--tcv-current-color-01-bg);
+}
+.persnoal-info{
+    max-width: 66.666%;
+}
+.tcv-08-aside-and-body > .tcv-08-col-4 {
+    padding: .5rem;
+}

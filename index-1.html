@@ -1,0 +1,52 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'}">
+    <div>
+        <input type="checkbox" data-bind="checked:is_arabic" /><span>AR/EN</span>
+        <br/>
+        <label data-bind="html:ko.vm.is_arabic()? inputName.label_ar: inputName.label_en"></label>
+        <input type="text" data-bind="value:inputName.value" />
+    </div>
+
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script>
+        let n=0;
+        n=0.3;
+        n='0';
+        n=['0'];
+        let o={
+            key:'value',
+            key2:[
+                'value',
+                {
+                d:1,
+                }
+            ],
+            o:{
+                k:'',
+            },
+        };
+        
+    Object.keys(o);//["key","key2","o"]
+    Object.values(o);
+    // [
+        // 'value',
+        // [
+    //             'value',
+    //             {
+    //             d:1,
+    //             }
+    //         ],
+    //{
+        // k:'',
+            // }]
+    ko.vm ={
+        is_arabic:ko.observable(true),
+        inputName:{
+            label_ar:("<strong>الاسم:</strong>"),
+            label_en:("<strong>Name:</strong>"),
+            label:ko.observable("<strong>Name:</strong>"),
+            value:ko.observable('Ahmed'),
+        }
+    }
+    ko.applyBindings(ko.vm, document.getElementById("html"));
+    </script>
+</html>

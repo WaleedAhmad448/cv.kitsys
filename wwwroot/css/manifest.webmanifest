@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "Build your own resume.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "../favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "MyCV - KitsHub",
+  "short_name": "MyCV",
+  "start_url": "/index.html"
+}

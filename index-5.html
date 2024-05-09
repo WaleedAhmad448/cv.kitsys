@@ -1,0 +1,44 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <style>
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+            }
+        </style>
+        <script>
+            if (localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.getElementById("html").classList.add("bg-dark");
+                document.getElementById("html").classList.add("uk-light");
+            }
+        </script>
+    </head>
+    <body >
+        <div class="container">
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span data-bind="html:is_arabic()?'English':'عربي'"></span>
+            </label>
+            <br/>
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="html:is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم')"></span>
+            </label>
+            <br/>
+            <div class="row">
+               <kit-input-text params="data:CurrentPage().data"></kit-input-text>
+            </div>
+        </div>
+    </body>
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script src="./wwwroot/lib/require.js/require.min.js"></script>
+    <script>
+        const URLBase = './wwwroot/';
+        const URLComponent = URLBase+"Components/";
+        const URLLib2Component = '../Components/';
+        const URLLibs = URLBase + "lib/";
+    </script>
+    <script src="./wwwroot/Components/init.js"></script>
+</html>

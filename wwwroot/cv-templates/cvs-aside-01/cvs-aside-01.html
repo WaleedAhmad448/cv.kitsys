@@ -1,0 +1,64 @@
+<aside class="cvs-aside-01">
+    <div class="cvs-aside-01-cover">
+        <div class="cvs-aside-01-img">
+        <div class="cvs-aside-01-img-head">
+            <img src="/wwwroot/images/person.png"/>
+        </div>
+        <div class="cvs-aside-01-img-body">
+            <!--ko with:getNormalizedObj().contacts-->
+            <!--ko with:fields-->
+            <div >
+                
+                <!--ko if:$data.country()-->
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:null}">
+                        <span class="fe-flag cvs-aside-01-icon" ></span>
+                        <span data-bind="html:$data.country"></span>
+                    </a>
+                </div>
+                <!--/ko-->
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:'https://www.google.com/maps/search/?api=1&query='+$data.address()}">
+                        <span class="fe-navigation cvs-aside-01-icon" ></span>
+                        <span data-bind="html:$data.address"></span>
+                    </a>
+                </div>
+                <!--ko if:$data.website&&$data.website()-->
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:$data.website}">
+                        <span class="fe-link cvs-aside-01-icon" ></span>
+                        <span data-bind="html:$data.website"></span>
+                    </a>
+                </div>
+                <!--/ko-->
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:'mailto:'+email()}">
+                        <span class="fe-mail cvs-aside-01-icon" ></span>
+                        <span data-bind="html:email"></span>
+                    </a>
+                </div>
+               
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:'tel:'+tel()}">
+                        <span class="fe-phone cvs-aside-01-icon" ></span>
+                        <span data-bind="html:tel"></span>
+                    </a>
+                </div>
+                <!--ko foreach:$data.mobiles-->
+                <div class="mb-2 cvs-aside-01-list-item">
+                    <a data-bind="attr:{href:'tel:'+val()}">
+                        <span class="fe-smartphone cvs-aside-01-icon" ></span>
+                        <span data-bind="html:val"></span>
+                    </a>
+                </div>
+                <!--/ko-->
+                
+            </div>
+            <!--/ko-->
+            <!--/ko-->
+        </div>
+        <div class="cvs-aside-01-img-foot">
+            
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,12 @@
+<div data-bind="attr:{class:$data.grid}">
+  <div class="row">
+      <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? ar:en"></label>
+      <div class="col-md-9">
+        <input class="uk-width-expand uk-range" type="range" data-bind="value:value,attr:{min:0,max:max}" />
+        <progress class="uk-progress" value="30" max="100" data-bind="value:value,attr:{max:max}"></progress>
+        <div class="progress row">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bind="attr:{style:('width: '+(val100())+'%')}" style="width: 75%"></div>
+        </div>
+      </div>
+  </div>
+  </div>

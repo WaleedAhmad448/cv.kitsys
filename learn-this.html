@@ -1,0 +1,51 @@
+<script>
+    
+
+    function funcA (x,y){
+       return x+y
+   }
+   console.log("funcA",funcA (5,3));
+   funcA = function (x,y){
+       return x-y
+    }
+    console.log("funcA",funcA (5,3));
+   let funcB = function (x,y){
+       return x+y
+   }
+   funcB = function (x,y){
+       console.log("funcA",x,y);
+       console.log("funcA",x+y);
+       return x-y
+   }
+   const funcC = function (x,y){
+       console.log("funcA",x,y);
+       console.log("funcA",x+y);
+       return x+y
+   }
+   let sum =function(){
+            return this.x+this.y;
+        };
+        
+   let sume =()=>{
+            return this.x+this.y;
+        };
+   let obj1={
+        x:5,y:6,
+        sum:sum,
+        sume:sume,
+    }
+    let obj2={
+        x:3,y:9,
+        sum:sum,
+        sume:sume,
+    }
+    function a(){
+        this.x=4;
+        this.y=5;
+        this.sum=sum;
+        return this;
+    }
+    obj1=new a();
+    obj2=new a();
+
+</script>

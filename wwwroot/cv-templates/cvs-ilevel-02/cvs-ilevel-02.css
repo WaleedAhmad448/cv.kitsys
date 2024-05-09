@@ -1,0 +1,12 @@
+.cvs-ilevel-02-item-rate{
+    color: var(--tcv-current-color-02-fg);
+    background: var(--tcv-current-color-gray);
+    width:100%;
+    display: flex;
+    height: 1rem;
+}
+.cvs-ilevel-02-item-rate span{
+    padding-left: 2px;
+    padding-right: 2px;
+    background: var(--tcv-current-color-01-bg);
+}

@@ -1,0 +1,89 @@
+
+
+
+[
+    {       
+    "componentName":"kit-input-text", 
+    "fn":"name",
+    "ar":"الاسم",
+    "en":"Name"
+},
+{       
+    "componentName":"kit-input-number", 
+    "fn":"age",
+    "ar":"العمر",
+    "en":"Age"
+    
+},
+{       
+    "componentName":"kit-input-email", 
+    "fn":"email",
+    "ar":"البريد الالكتروني",
+    "en":"emai"
+    
+},
+{       
+    "componentName":"kit-input-password", 
+    "fn":"pass",
+    "ar":"كلمه المرور",
+    "en":"password"
+    
+},
+{       
+    "componentName":"kit-input-tel",
+    "fn":"phone", 
+    "ar":"الهاتف",
+    "en":"phone"
+    
+},
+{       
+    "componentName":"kit-input-date", 
+    "fn":"bdate",
+    "ar":"تاريخ الميلاد",
+    "en":"Birth date"
+},
+{       
+    "componentName":"kit-input-checkbox",
+    "fn":"agree", 
+    "ar":"اوافق على الشروط",
+    "en":"Agree"
+    
+},
+{       
+    "componentName":"kit-textarea", 
+    "fn":"note",
+    "ar":"ملاحظات",
+    "en":"Notes"
+    
+},
+{       
+    "componentName":"kit-input-radio", 
+    "fn":"gender",
+    "ar":"نوع الجنس",
+    "en":"Gender",
+    
+    "getOptions":"function(){\n        return [\n            {\n                \"value\":\"1\",\n                \"ar\":\"ذكر\",\n                \"en\":\"Male\"\n            },\n            {\n                \"value\":\"2\",\n                \"ar\":\"أنثى\",\n                \"en\":\"Female\"\n            }\n        ]\n    }"
+},
+{       
+    "componentName":"kit-input-select", 
+    "fn":"gender2",
+    "ar":"نوع الجنس",
+    "en":"Gender",
+    "getOptions":"function(){\n        return [\n            {\n                \"value\":\"1\",\n                \"ar\":\"ذكر\",\n                \"en\":\"Male\"\n            },\n            {\n                \"value\":\"2\",\n                \"ar\":\"أنثى\",\n                \"en\":\"Female\"\n            }\n        ]\n    }"
+},
+{       
+    "componentName":"kit-button", 
+    "fn":"btnNext",
+    "ar":"التالي",
+    "en":"Next"
+    
+},
+{       
+    "componentName":"kit-button", 
+    "fn":"btnBack",
+    "ar":"رجوع",
+    "btnClass":"default",
+    "en":"Back"
+    
+}
+]

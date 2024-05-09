@@ -1,0 +1,10 @@
+
+.cvs-social-media-01{
+    margin-top: 5px;
+}
+.cvs-social-media-01 > a >span {
+    background: var(--tcv-current-color-01-fg);
+    color: var(--tcv-current-color-01-bg);
+    padding: 10px;
+    border-radius: 20px;
+}

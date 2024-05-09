@@ -1,0 +1,77 @@
+.kit-print-preview{
+    --tcv-current-color-01-bg:#43B1B4;
+    --tcv-current-color-01-fg:#FFFFFF;
+    --tcv-current-color-02-bg:#FFFFFF;
+    --tcv-current-color-02-fg:#43B1B4;
+    --tcv-current-color-gray:#5e5e5e52;
+}
+.kit-print-preview{
+    text-align: start;
+    
+}
+.kit-print-preview{
+    height: 100%;
+}
+.kit-print-preview.preview.not-print {
+    /* transform: scale(0.5); */
+    /* transform-origin: 0% 0% 0px; */
+    overflow: auto;
+}
+.kit-print-preview.preview{
+    /* transform: scale(0.5); */
+    /* transform-origin: 0% 0% 0px; */
+    max-height: 600px;
+    max-height:calc(70vh);
+    max-height: 100%;
+    height: 100%;
+    color:black;
+    background-color: white;
+}
+.kit-print-preview.preview.not-print > .row{
+    --preview-zoom:100%;
+    zoom: var(--preview-zoom);
+}
+.kit-print-preview.preview > .row > div{
+    min-width: 1000px;
+    max-width: 2480px;
+
+}
+.uk-light .kit-print-preview.preview >*{
+    /* color:black; */
+    /* background-color: white; */
+}
+.uk-light .kit-print-preview.preview  *{
+    /* color:black; */
+}
+
+#kit-print-container{
+    margin: 0.5rem;
+    margin: 0rem;
+    padding: 0rem;
+}
+.kit-print-preview-actions{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        z-index: 100;
+        text-align: center;
+    }
+    .kit-print-preview-actions .buttons > button,.kit-print-preview-actions .buttons > span > button{
+        filter: drop-shadow(2px 4px 6px black);
+        filter: invert(1);
+        opacity: .5;
+    
+    }
+    
+    .kit-print-preview-actions .buttons > button:hover,.kit-print-preview-actions .buttons > span > button:hover{
+    opacity: 1;
+}
+.kit-print-preview-actions .uk-dropdown{
+    padding: 16px 50px 16px 50px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+.uk-light .uk-dropdown {
+    background: var(--dark);
+}

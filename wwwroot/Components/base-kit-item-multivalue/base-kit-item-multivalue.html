@@ -1,0 +1,13 @@
+<div class="row m-2" >
+    <div class="uk-width-expand">
+        <div class="row">
+        <div class="col-md-12" data-bind="attr:{class:($data.gridHead||'col-md-12')}" style="text-align: center">
+          <base-kit-item-head class="row" params="data:$data"></base-kit-item-head>
+      </div>
+      <div class="col-md-12" data-bind="attr:{class:($data.gridBody||'col-md-12')}">
+          <!-- ko template: { nodes: $componentTemplateNodes, data: $data } -->
+          <!-- /ko -->
+      </div>
+  </div>
+  </div>
+</div>

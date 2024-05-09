@@ -1,0 +1,28 @@
+ <!--ko if:$data.ukSortableHandle-->
+ <div class="uk-width-auto" style="align-self: center;">
+    <span data-bind="attr:{class:('uk-sortable-handle uk-margin-small-right uk-text-center '+$data.ukSortableHandle)}" uk-icon="icon: table"></span>
+  </div>
+  <!--/ko-->
+<!-- <kit-item-icon class="uk-width-1-1" params="data:$data"></kit-item-icon> -->
+<div class="uk-width-expand">
+    <!--ko if:isEditMode-->
+    <input type="text" class="uk-input" data-bind="value:val">
+    <label >
+        <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+        <a class="uk-icon-button" uk-icon="refresh" data-bind="click:rest"></a>
+        <label >
+            <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+            <a class="uk-icon-button" uk-icon="check"></a>
+        </label>
+
+    </label>
+    <!--/ko-->
+    <!--ko ifnot:isEditMode-->
+    <label >
+        <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+        <span class="uk-icon-button" uk-icon="pencil" ></span>
+    </label>
+    <span data-bind="html:val"></span>
+
+    <!--/ko-->
+</div>

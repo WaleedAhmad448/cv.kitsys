@@ -1,0 +1,39 @@
+<!--ko if:visible-->
+<base-kit-item data-bind="attr:{class:(ko.UiClassBaseKitItem() +' '+ $data.grid)}" params="data:$data">
+<div class="row">
+
+    <!-- <div class="col-12">
+        <select class="uk-select" data-bind="value:$component.calc.inputType" >
+            <option value="date">date</option>
+            <option value="month">month</option>
+            <option value="text">text</option>
+        </select>
+    </div> -->
+    <!--ko with:props-->
+    <div class="col-4">
+        <label>
+            From
+            <input class="uk-input" type="date" data-bind="value:sdate, attr:{type:$component.calc.inputType}" />
+        </label>
+    </div>
+
+    <!--ko if:sdate-->
+    <div class="col-4">
+        <label>
+            <input class="uk-checkbox" type="checkbox" data-bind="checked:isPresent" />
+            Is present
+        </label>
+    </div>
+    <!--ko ifnot:isPresent-->
+    <div class="col-4">
+        <label>
+            To
+            <input class="uk-input" type="date" data-bind="value:edate, attr:{type:$component.calc.inputType}" />
+        </label>
+    </div>
+    <!--/ko-->
+    <!--/ko-->
+    <!--/ko-->
+</div>
+</base-kit-item>
+<!--/ko-->

@@ -1,0 +1,74 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/font-awesome/css/fontawesome.min.css"rel="stylesheet"/>        
+        <meta charset="utf-8"/>
+        <style>
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+            }
+            .row{
+                width: 100%;
+            }
+            .validationMessage{
+                color:darkred;
+                font-weight: bold;
+            }
+            
+            </style>
+        <script>
+            if (localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.getElementById("html").classList.add("bg-dark");
+                document.getElementById("html").classList.add("uk-light");
+                //comment
+                //edit
+            }
+        </script>
+    </head>
+    <body >
+        <div class="container">
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span data-bind="html:is_arabic()?'English':'عربي'"></span>
+            </label>
+            <br/>
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="html:is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم')"></span>
+            </label>
+            <br/>
+            <div class="row">
+                <!--kof with:CurrentPage-->
+                <!--kof component:{name:componentName,params:{data:data}}-->
+                <!--/kof-->
+                <!--/kof-->
+
+                <div>
+                    <span>lksdlk</span>
+
+                </div>
+                <!--ko with:(()=>{if(!ko.learn01){ko.learn01=ko.observable();} return ko.learn01;})()  -->
+
+                <progress  value="30" max="100" data-bind="value:value,attr:{max:max}"></progress>
+                <progress class="uk-progress" value="30" max="100" data-bind="value:value,attr:{max:max}"></progress>
+                <div class="progress row">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-bind="attr:{style:('width: '+(value())+'%')}" style="width: 75%"></div>
+                  </div>
+                <!--/ko-->
+            </div>
+        </div>
+    </body>
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script src="./wwwroot/lib/require.js/require.min.js"></script>
+    <script>
+        const URLBase = './wwwroot/';
+        const URLComponent = URLBase+"Components/";
+        const URLLib2Component = '../Components/';
+        const URLLibs = URLBase + "lib/";
+        const URLApi = "/api/";
+        const page = window.location.search.slice(1).split("&").map(q=>q.split('=')).reduce((a,b)=>{a[b[0]]=b[1];  return a},{page:"login"}).page;
+    </script>
+    <script src="./wwwroot/Components/init.js"></script>
+</html>

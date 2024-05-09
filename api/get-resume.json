@@ -1,0 +1,195 @@
+{
+  "id": "string",
+  "userId": "string",
+  "templateId": "string",
+  "local": "string",
+  "personalInfo": {
+    "customLabel": "string",
+    "fields": {
+      "fName": "string",
+      "sName": "string",
+      "tName": "string",
+      "lName": "string",
+      "country": "string",
+      "bdate": "string",
+      "natioality": "string",
+      "gender": 0,
+      "mStatus": 0,
+      "coverLetter": "string"
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "eductions": {
+    "customLabel": "string",
+    "fields": {
+      "schools": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true
+        }
+      ],
+      "universities": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true,
+          "faculity": "string"
+        }
+      ],
+      "institutes": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true
+        }
+      ],
+      "courses": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true
+        }
+      ]
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "employments": {
+    "customLabel": "string",
+    "fields": {
+      "employments": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true
+        }
+      ],
+      "trainings": [
+        {
+          "contry": "string",
+          "city": "string",
+          "orgName": "string",
+          "majorName": "string",
+          "sdate": "string",
+          "description": "string",
+          "edate": "string",
+          "isPresent": true
+        }
+      ]
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "languages": {
+    "customLabel": "string",
+    "fields": {
+      "name": "string",
+      "level": 0
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "skills": {
+    "customLabel": "string",
+    "fields": {
+      "name": "string",
+      "level": 0
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "hobies": {
+    "customLabel": "string",
+    "fields": {
+      "names": [
+        "string"
+      ]
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "communications": {
+    "customLabel": "string",
+    "fields": {},
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "events": {
+    "customLabel": "string",
+    "fields": {
+      "contry": "string",
+      "city": "string",
+      "orgName": "string",
+      "majorName": "string",
+      "sdate": "string",
+      "description": "string",
+      "edate": "string",
+      "isPresent": true
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  },
+  "achievements": {
+    "customLabel": "string",
+    "fields": {
+      "achievementDescribtion": "string",
+      "date": "string"
+    },
+    "customFields": [
+      {
+        "fn": "string"
+      }
+    ]
+  }
+}

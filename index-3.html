@@ -1,0 +1,53 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <style>
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+            }
+        </style>
+    </head>
+    <body >
+        <div class="container">
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span data-bind="html:is_arabic()?'English':'عربي'"></span>
+            </label>
+            <br/>
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="html:is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم')"></span>
+            </label>
+            <br/>
+            <div class="row">
+                <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? inputName.label_ar: inputName.label_en"></label>
+                <input class="col-md-9 uk-input" type="text" data-bind="value:inputName.value" />
+
+                <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? inputName.label_ar: inputName.label_en"></label>
+                <input class="col-md-9 uk-input" type="text" data-bind="value:inputName.value" /> 
+                
+                <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? inputName.label_ar: inputName.label_en"></label>
+                <input class="col-md-9 uk-input" type="text" data-bind="value:inputName.value" /> 
+                
+                <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? inputName.label_ar: inputName.label_en"></label>
+                <input class="col-md-9 uk-input" type="text" data-bind="value:inputName.value" />
+            </div>
+        </div>
+    </body>
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script>
+    ko.vm ={
+        is_arabic:ko.observable(true),
+        is_dark:ko.observable(false),
+        inputName:{
+            label_ar:("<strong>الاسم:</strong>"),
+            label_en:("<strong>Name:</strong>"),
+            label:ko.observable("<strong>Name:</strong>"),
+            value:ko.observable('Ahmed'),
+        }
+    }
+    ko.applyBindings(ko.vm, document.getElementById("html"));
+    </script>
+</html>

@@ -1,0 +1,75 @@
+
+.dir-right .display-ar {
+    display: inherit;
+}
+
+.display-ar {
+    display: none;
+}
+.dir-right .display-en {
+    display: none;
+}
+
+.display-en {
+    display: inherit;
+}
+.hat-tselect{
+    z-index:1
+}
+.dir-right .ts-wrapper.plugin-remove_button .item .remove {
+    border-left: 0px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+    border-radius: 0 2px 2px 0;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 0;
+    padding: 0 6px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.ts-wrapper.multi .ts-control {
+    
+    border: none;
+}
+    .dir-right .ts-wrapper.multi .ts-control > div {
+    background: #f2f2f2;
+    border: 0 solid #d0d0d0;
+    color: #303030;
+    cursor: pointer;
+    margin: 0 0px 3px 3px !important;
+    padding: 6px 2px;
+}
+.dir-right .ts-wrapper.plugin-remove_button .item {
+    padding-right: 6px !important;
+    padding-left: 0px !important;
+    padding-bottom:2px !important;
+    padding-top:2px !important;
+}
+.uk-light .ts-control, .uk-light .ts-wrapper.single.input-active .ts-control {
+    background: transparent;
+}
+.uk-light .ts-control{
+    border:none;
+}
+.uk-light .ts-dropdown .active, .uk-light .ts-dropdown .create:hover, .uk-light .ts-dropdown .option:hover{
+    background-color: var(--primary);
+    color: var(--light);
+}
+.uk-light .ts-dropdown .option, .uk-light .ts-dropdown .no-results {
+    background-color: var(--gray-dark);
+    color: var(--light);
+}
+.uk-light .ts-control > input{
+    color: var(--light);
+
+}
+.uk-light .ts-dropdown {
+    border-color: var(--primary);
+}
+
+.uk-light .ts-wrapper.multi .ts-control > div {
+    background-color: var(--gray-dark);
+    color: var(--light);
+}

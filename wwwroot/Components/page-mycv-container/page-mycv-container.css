@@ -1,0 +1,39 @@
+:root{
+    --scrollbar-color: hsla(0,0%,100%,0.25);
+    --scrollbar-color: rgba(29, 27, 27, 0.603);
+    --scrollbar-bg: transparent;
+    
+  
+}
+.uk-light{
+    --scrollbar-color: hsla(0,0%,100%,0.25);
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: auto;
+    background-color: var(--scrollbar-bg,auto);
+}
+::-webkit-scrollbar-corner {
+    background-color: auto;
+    background-color: var(--scrollbar-bg,auto);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px auto;
+    border: 2px solid var(--scrollbar-bg,auto);
+    background: var(--scrollbar-color);
+}
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+.preview-mobile-action{
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    font-size: 22px;
+}
+.preview-mobile-action .uk-icon-button{
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,18 @@
+<div class="row m-2" >
+    <div class="uk-width-expand">
+        <div class="row">
+        <div class="col-md-12" data-bind="attr:{class:($data.gridHead||'col-md-12')}" style="text-align: center">
+          <base-kit-item-head class="row" params="data:$data"></base-kit-item-head>
+      </div>
+      <div class="col-md-12" data-bind="attr:{class:($data.gridBody||'col-md-12')}">
+        <!-- ko template: { nodes: $componentTemplateNodes, data: $data } -->
+        <!-- /ko -->
+        <!--ko if:$data.isMultiVal-->
+        <div class="uk-width-1-1 p-2">
+            <button type="button" class="uk-button uk-button-default uk-width-1-1" data-bind="click:function(){if($data.addClick)$data.addClick();else{$data.values&&$data.values.push({val:ko.observable()})}}">+</button>
+        </div>
+        <!--/ko-->
+      </div>
+  </div>
+  </div>
+</div>

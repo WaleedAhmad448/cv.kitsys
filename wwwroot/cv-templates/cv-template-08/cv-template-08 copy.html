@@ -1,0 +1,117 @@
+<div id="kit-print-container" class="cv-template-container">
+	
+<div class="template-cv-08">
+	<div class="">
+		<div class="tcv-08-header">
+			<div class="tcv-08-col-4"></div>
+			<div class="persnoal-info" >
+				<div class="persnoal-info-01">
+					<!--ko with:getNormalizedObj().personalInfo-->
+					<!--ko with:fields-->
+					<span class="person-name">
+						<span data-bind="html:fName"></span>
+						<!--ko if:$data.sName-->
+						<span data-bind="html:sName"></span>
+						<!--/ko-->
+						<!--ko if:$data.tName-->
+						<span data-bind="html:tName"></span>
+						<!--/ko-->
+						<span data-bind="html:lName"></span>
+					</span>
+					<span class="person-name-divider"></span>
+					<!--ko if:$data.headline-->
+					<span class="major-name" data-bind="html:headline"></span>
+					<!--/ko-->
+					<!--/ko-->
+					<!--/ko-->
+					<!--ko with:getNormalizedObj().contacts?.uiGetSocialMedia()-->
+					<!--ko if:list.length>0-->
+					<!--ko component:{name:($data.cn ||'cvs-social-media-01'),params:{data:$data}}-->
+					<!--/ko-->
+					<!--/ko-->
+					<!--/ko-->
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="tcv-08-row">
+
+			<div class="tcv-08-col-4">
+				<cvs-aside-01 params="data:{}"></cvs-aside-01>
+				<div class="tcv-08-row tcv-08-aside" style="display: none;">
+					<div>
+						<div class="tcv-08-aside-img">
+						<div class="tcv-08-aside-img-head">
+							<img src="/wwwroot/images/person.png"/>
+						</div>
+						<div class="tcv-08-aside-img-body">
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+							asdklfl klasd<br/>
+						</div>
+						<div class="tcv-08-aside-img-foot">
+							asdklfl klasd
+						</div>
+					</div>
+					
+						<!--ko component:{name:'cvs-section-01',params:{data:{}}}-->
+						<!--ko component:{name:'cvs-label-01',params:{data:{label:'Skills'}}}-->
+						<!--/ko-->
+						<!--ko component:{name:'cvs-tls-01',params:{data:{isDemo:true}}}-->
+						<!--/ko-->
+						<!--/ko-->
+						 <!--ko component:{name:'cvs-section-01',params:{data:{}}}-->
+						<!--ko component:{name:'cvs-label-01',params:{data:{label:'Languages'}}}-->
+						<!--/ko-->
+						<!--ko component:{name:'cvs-ilevel-01',params:{data:{max:5,val:4}}}-->
+						<!--/ko-->
+						
+						<!--ko component:{name:'cvs-ilevel-01',params:{data:{max:5,val:2}}}-->
+						<!--/ko-->
+						<!--ko component:{name:'cvs-ilevel-02',params:{data:{max:5,val:2}}}-->
+						<!--/ko-->
+						<!--ko component:{name:'cvs-ilevel-03',params:{data:{max:5,val:2}}}-->
+						<!--/ko-->
+						<!--ko component:{name:'cvs-ilevel-03',params:{data:{max:5,val:2}}}-->
+						<!--/ko-->
+						<!--/ko-->
+				   
+					
+					</div>
+				</div>
+			   
+			</div>
+			<!--ko component:{name:'cvs-body-01',params:{data:{}}}-->
+			<!--ko component:{name:'cvs-section-01',params:{data:{}}}-->
+			<!--ko component:{name:'cvs-label-01',params:{data:{label:'Skills'}}}-->
+			<!--/ko-->
+			<!--ko component:{name:'cvs-tls-01',params:{data:{isDemo:true}}}-->
+			<!--/ko-->
+			<!--/ko-->
+						
+			<!--ko component:{name:'cvs-section-01',params:{data:{}}}-->
+			<!--ko component:{name:'cvs-label-01',params:{data:{label:'Skills'}}}-->
+			<!--/ko-->
+			<!--ko component:{name:'cvs-tls-01',params:{data:{isDemo:true}}}-->
+			<!--/ko-->
+			
+						<!--ko component:{name:'cvs-ilevel-03',params:{data:{max:5,val:2}}}-->
+						<!--/ko-->
+			<!--/ko-->
+
+			<!--/ko-->
+		</div>
+		<div class="tcv-08-row tcv-08-footer">
+		</div>
+	</div>
+</div>
+</div>

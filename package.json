@@ -1,0 +1,23 @@
+{
+  "name": "kitsyswmvvm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KitSys/KitSysWMVVM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KitSys/KitSysWMVVM/issues"
+  },
+  "homepage": "https://github.com/KitSys/KitSysWMVVM#readme",
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "xlsx": "^0.18.2"
+  }
+}

@@ -1,0 +1,22 @@
+<div class="cv-tls-01">               
+    <!--ko with:$data.items-->
+    <!--ko foreach:$data-->
+    <div class="cv-tls-01-item">
+        <div class="cv-tls-01-point"><span></span><span></span></div>    
+        <span class="cv-tls-01-year" >
+            <span data-bind="html:$data.sdate"></span> 
+            <span>-</span> 
+            <span data-bind="html:$data.edate"></span>
+        </span>    
+        <div class="cv-tls-01-body">
+            <div class="cv-tls-01-title tcv-08-flex">
+                <span class="cv-tls-01-majorName tcv-08-width-expand" data-bind="html:$data.majorName"></span>
+                <span class="cv-tls-01-country" data-bind="html:$data.orgName">Sana'a</span>
+            </div>
+            
+            <div class="cv-tls-01-desc" data-bind="html:$data.description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</div>
+        </div>    
+    </div>
+    <!--/ko-->
+    <!--/ko-->
+</div>

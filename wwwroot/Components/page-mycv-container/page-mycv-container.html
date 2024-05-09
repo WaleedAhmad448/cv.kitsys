@@ -1,0 +1,31 @@
+<!--ko if:visible-->
+
+<div data-bind="attr:{class:($data.grid +' row kit-height-100')},visible:visible" >
+<div data-bind="visible:!preview.expandPreveiw()" class="uk-width-expand kit-height-100" uk-height-viewport="offset-top: true; offset-bottom: true" style="overflow-y: auto;overflow-x: hidden;">
+<div class="row">
+<!--ko foreach:items-->
+<!--ko component:{name:componentName,params:{data:$data}}-->
+<!--/ko-->
+<!--/ko-->
+</div>
+</div>
+
+<div data-bind="css:{'col-md-6 uk-visible@m':!preview.expandPreveiw(),'uk-width-expand':preview.expandPreveiw}" class=" kit-height-100"  style="overflow: auto;">
+<div class="row" style="height: 100%;">
+<!--ko with:preview-->
+<!--ko component:{name:componentName,params:{data:$data}}-->
+<!--/ko-->
+<!--/ko-->
+</div>
+</div>
+</div>
+<!--ko ifnot:preview.expandPreveiw-->
+<div class="uk-hidden@m">
+
+    <label class="preview-mobile-action">
+        <span class="uk-icon-button uk-icon"><span class="fas fa-eye"></span></span>
+        <input type="checkbox" hidden data-bind="checked:preview.expandPreveiw">
+    </div>
+</div>
+<!--/ko-->
+<!--/ko-->

@@ -1,0 +1,183 @@
+﻿.hat-brand {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background: #fff;
+}
+.hat-toggle-theme {
+    bottom: 0rem;
+    left: .1em;
+    padding: 0;
+    width: 4em;
+    height: 4em;
+}
+.hat-toggle-lang {
+    bottom: 4rem;
+    left: .1em;
+    padding: 0;
+    width: 4em;
+    height: 4em;
+}
+    .hat-toggle-theme label, .hat-toggle-lang label {
+        height: 1.7em;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+.hat-brand-text {
+    font-size: 1.5rem;
+    transform: translateY(-0.5rem) translateX(-1rem);
+    display: inline-block;
+}
+.hat-brand-overlay {
+    width: 20%;
+}
+.uk-light #PageOverlay {
+    background: #343a40;
+}
+
+#PageOverlay {
+    background: #fff;
+    z-index: 999999 !important;
+}
+
+@keyframes hat-brand-gradient-animation {
+    to {
+        background-position: right;
+    }
+}
+.hat-logo{
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg version="1.1" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"> <g> <g> <g> <path class="st0" d="M248.067,365.241C197.56,414.254,135.391,451.262,68.09,471.907c-12.937,3.968-26.464,7.417-40.109,6.497 c-6.682-0.451-10.56-5.311-4.004-11.86c4.275-4.271,8.347-4.171,14.044-5.622c31.969-8.145,61.562-25.407,84.388-49.227 c2.655-2.77,5.339-5.711,8.885-7.176c3.546-1.465,6.52-0.09,8.648,3.103c1.807,2.712,3.229,5.941,5.898,7.812 c2.665,1.868,6.295,0.178,9.041-1.567c88.39-56.19,131.414-161.788,206.812-234.489c13.36-12.882,28.115-24.937,45.558-31.275 c17.443-6.338,38.082-6.187,53.465,4.195s23.221,32.312,14.512,48.7c-5.283-17.261-25.55-26.525-43.481-24.449 s-33.625,12.906-47.121,24.894c-41.28,36.667-68.802,86.01-103.992,128.556C270.432,342.332,259.551,354.096,248.067,365.241z" /> </g> </g> <g> <g> <path class="st1" d="M248.067,365.241C197.56,414.254,135.391,451.262,68.09,471.907c-12.937,3.968-26.464,7.417-40.109,6.497 c-6.682-0.451-10.56-5.311-4.004-11.86c4.275-4.271,8.347-4.171,14.044-5.622c31.969-8.145,61.562-25.407,84.388-49.227 c2.655-2.77,5.339-5.711,8.885-7.176c3.546-1.465,6.52-0.09,8.648,3.103c1.807,2.712,3.229,5.941,5.898,7.812 c2.665,1.868,6.295,0.178,9.041-1.567c88.39-56.19,131.414-161.788,206.812-234.489c13.36-12.882,28.115-24.937,45.558-31.275 c17.443-6.338,38.082-6.187,53.465,4.195s23.221,32.312,14.512,48.7c-5.283-17.261-25.55-26.525-43.481-24.449 s-33.625,12.906-47.121,24.894c-41.28,36.667-68.802,86.01-103.992,128.556C270.432,342.332,259.551,354.096,248.067,365.241z" /> </g> </g> <g> <g> <path class="st1" d="M232.49,238.685c17.101-15.541,35.542-29.64,55.092-42.041c8.75-5.551,17.721-10.76,26.888-15.603 c25.221-13.326,53.358-24.199,81.625-20.856c3.011,0.356,6.597,0.667,8.566-1.632c2.315-2.704,0.582-6.766-1.235-9.784 c-23.03-38.256-50.526-75.272-88.473-99.291c-43.551-27.567-99.404-35.559-149.472-21.431S71.953,78.176,49.076,124.414 s-24.808,101.953-5.219,149.268c11.374,27.473,29.39,51.721,48.749,74.381c8.435,9.873,17.238,19.764,27.623,27.705 c13.981,10.691,15.897-5.206,21.397-16.46c10.753-22.001,23.615-43.006,38.291-62.696 C195.502,275.704,213.138,256.272,232.49,238.685z" /></g></g></g></svg>') center/contain;
+    mask: url('data:image/svg+xml;utf8,<svg version="1.1" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"> <g> <g> <g> <path class="st0" d="M248.067,365.241C197.56,414.254,135.391,451.262,68.09,471.907c-12.937,3.968-26.464,7.417-40.109,6.497 c-6.682-0.451-10.56-5.311-4.004-11.86c4.275-4.271,8.347-4.171,14.044-5.622c31.969-8.145,61.562-25.407,84.388-49.227 c2.655-2.77,5.339-5.711,8.885-7.176c3.546-1.465,6.52-0.09,8.648,3.103c1.807,2.712,3.229,5.941,5.898,7.812 c2.665,1.868,6.295,0.178,9.041-1.567c88.39-56.19,131.414-161.788,206.812-234.489c13.36-12.882,28.115-24.937,45.558-31.275 c17.443-6.338,38.082-6.187,53.465,4.195s23.221,32.312,14.512,48.7c-5.283-17.261-25.55-26.525-43.481-24.449 s-33.625,12.906-47.121,24.894c-41.28,36.667-68.802,86.01-103.992,128.556C270.432,342.332,259.551,354.096,248.067,365.241z" /> </g> </g> <g> <g> <path class="st1" d="M248.067,365.241C197.56,414.254,135.391,451.262,68.09,471.907c-12.937,3.968-26.464,7.417-40.109,6.497 c-6.682-0.451-10.56-5.311-4.004-11.86c4.275-4.271,8.347-4.171,14.044-5.622c31.969-8.145,61.562-25.407,84.388-49.227 c2.655-2.77,5.339-5.711,8.885-7.176c3.546-1.465,6.52-0.09,8.648,3.103c1.807,2.712,3.229,5.941,5.898,7.812 c2.665,1.868,6.295,0.178,9.041-1.567c88.39-56.19,131.414-161.788,206.812-234.489c13.36-12.882,28.115-24.937,45.558-31.275 c17.443-6.338,38.082-6.187,53.465,4.195s23.221,32.312,14.512,48.7c-5.283-17.261-25.55-26.525-43.481-24.449 s-33.625,12.906-47.121,24.894c-41.28,36.667-68.802,86.01-103.992,128.556C270.432,342.332,259.551,354.096,248.067,365.241z" /> </g> </g> <g> <g> <path class="st1" d="M232.49,238.685c17.101-15.541,35.542-29.64,55.092-42.041c8.75-5.551,17.721-10.76,26.888-15.603 c25.221-13.326,53.358-24.199,81.625-20.856c3.011,0.356,6.597,0.667,8.566-1.632c2.315-2.704,0.582-6.766-1.235-9.784 c-23.03-38.256-50.526-75.272-88.473-99.291c-43.551-27.567-99.404-35.559-149.472-21.431S71.953,78.176,49.076,124.414 s-24.808,101.953-5.219,149.268c11.374,27.473,29.39,51.721,48.749,74.381c8.435,9.873,17.238,19.764,27.623,27.705 c13.981,10.691,15.897-5.206,21.397-16.46c10.753-22.001,23.615-43.006,38.291-62.696 C195.502,275.704,213.138,256.272,232.49,238.685z" /></g></g></g></svg>') center/contain;
+}
+#PageOverlaySvgBox {
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+    background: linear-gradient(to right, #365280,#44BC66) left/200% 100%;
+    -webkit-animation: hat-brand-gradient-animation 3s infinite linear alternate;
+    -moz-animation: hat-brand-gradient-animation 3s infinite linear alternate;
+    -o-animation: hat-brand-gradient-animation 3s infinite linear alternate;
+    animation: hat-brand-gradient-animation 3s infinite linear alternate;
+}
+#PageOverlay, #overlay, #vmOverlay {
+    position: fixed !important;
+    z-index: 99999 !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    transition: 1s 0.4s !important;
+}
+.loader {
+    top: 20%;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+@font-face {
+    font-family: "BalooThambi-Regular";
+    src: url(./fonts/BalooThambi-Regular.ttf);
+    font-display: swap;
+}
+
+.BalooThambi-Regular {
+    font-family: "BalooThambi-Regular";
+    letter-spacing: .2rem;
+}
+body {
+    background-color: #e0e0e050;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.uk-light body{background:transparent}
+.nav-link.active {
+    font-weight: 500;
+}
+header nav.navbar {
+    padding: 0.1rem 2rem;
+
+}
+
+#overlay.hide-overlay, #PageOverlay.hide-overlay {
+    opacity: 0;
+    z-index: -1 !important;
+}
+
+#PageOverlay, #overlay {
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    opacity: 1;
+}
+
+.loader h1 {
+    font-weight: bold;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.33) !important;
+    ;
+    backdrop-filter: blur(8px);
+}
+
+nav a.navbar-brand {
+    padding: 0;
+    height: 2.5rem;
+}
+html.uk-light .card {
+    background: #1d222750;
+    border: 1px solid #282f35;
+}
+
+* {
+    font-family: "Times New Roman", "Arial", serif;
+}
+
+.hat-rest-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uk-icon-button {
+    cursor: pointer;
+}
+.nav-link.active {
+    font-weight: 500;
+}
+
+header nav.navbar {
+    padding: 0.1rem 2rem;
+}
+
+header nav * {
+    color: #fff;
+}
+.hat-ditem > label > div:first-child, hat-input-radio > .hat-ditem > div:first-child {
+    text-align: end;
+    align-self: center;
+}
+
+.control-label {
+    text-align: start;
+}
+.uk-light body{
+    color:#fff;
+}
+.validationMessage {
+    color: darkred;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: start;
+}
+.hat-ditem {
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .validationMessage, .control-label, .hat-ditem > label > div:first-child, hat-input-radio > .hat-ditem > div:first-child {
+        text-align: start;
+    }
+}

@@ -1,0 +1,9 @@
+<!--ko if:visible-->
+<div class="col-md-12 row" data-bind="attr:{class:($data.grid +' row')},visible:visible">
+    <h3 class="col-md-12" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? ar:en"></h3>
+    <!--ko foreach:items-->
+    <!--ko component:{name:componentName,params:{data:$data}}-->
+    <!--/ko-->
+    <!--/ko-->
+</div>
+<!--/ko-->

@@ -1,0 +1,10 @@
+.cvs-ilevel-01-item-rate span{
+    color: var(--tcv-current-color-02-fg) !important;
+}
+.cvs-ilevel-01-item-rate span{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.cvs-ilevel-01-item-rate span.disabled{
+    color: var(--tcv-current-color-gray) !important;
+}

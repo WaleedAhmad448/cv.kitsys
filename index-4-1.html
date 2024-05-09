@@ -1,0 +1,172 @@
+<html id="html" data-bind="attr:{dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <style>
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+            }
+        </style>
+        <script>
+            if (localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.getElementById("html").classList.add("bg-dark");
+                document.getElementById("html").classList.add("uk-light");
+            }
+        </script>
+    </head>
+    <body >
+        <div class="container">
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span data-bind="html:is_arabic()?'English':'عربي'"></span>
+            </label>
+            <br/>
+            <label class="btn btn-primary">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="html:is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم')"></span>
+            </label>
+            <br/>
+            <div class="row">
+                
+                <!-- <div data-bind="template:'template-01'"></div> -->
+                <!--ko template:{name:'template-001',data:inputName}-->
+                <!--/ko-->
+                 <!--kof template:{name:'template-01',data:inputName2}-->
+                <!--/kof-->
+                <!-- <div data-bind="foreach:items">
+                    <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? label_ar: label_en"></label>
+                    <input class="col-md-9 uk-input" type="text" data-bind="value:value" />
+                </div> -->
+                
+                 <!--kof foreach:items-->
+                 <!-- <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? label_ar: label_en"></label>
+                 <input class="col-md-9 uk-input" type="text" data-bind="value:value" /> -->
+                <!--/kof-->
+                 <!--kof template:{name:'template-01',foreach:items}-->
+                <!--/kof-->
+                 <!--kof foreach:items-->
+                 <!--kof template:{name:templateName,data:$data}-->
+                 <hr class="col-12"/>
+                <!--/kof-->
+                <!--/kof-->
+                <!--kof component:{name:'component-01',params:{data:inputName}}-->
+                <!--/kof-->
+               
+            </div>
+        </div>
+    </body>
+    <script type="text/html" id="template-01">
+        <label class="col-md-3" style="text-align: end;" data-bind="html:ko.vm.is_arabic()? label_ar: label_en"></label>
+        <input class="col-md-9 uk-input" type="text" data-bind="value:value" />
+    </script>
+    <script type="text/html" id="template-001">
+        <!--ko with:sLabel-->
+        <!--ko ifnot:isEditMode-->
+        <div class="col-md-3">
+
+            <span  style="text-align: end;" data-bind="html:val"></span>
+            <label>
+                    E
+                <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+            </button>
+        </div>
+        <!--/ko-->
+
+        <!--ko if:isEditMode-->
+        <div class="col-md-3 ">
+
+            <input class="uk-input" type="text" data-bind="value:val" />
+            <label>
+                S
+            <input type="checkbox" data-bind="checked:isEditMode" hidden/>
+        </button>
+        </div>
+        
+        <!--/ko-->
+        <!--/ko-->
+        
+        <input class="col-md-9 uk-input" type="text" data-bind="value:value" />
+    </script>
+    
+    <script type="text/html" id="template-02">
+        <label class="col-md-3" style="color:blue; text-align: end;" data-bind="html:ko.vm.is_arabic()? label_ar: label_en"></label>
+        <input class="col-md-9 uk-input" type="text" data-bind="value:value" />
+    </script>
+    
+    <script type="text/html" id="template-03">
+        
+        <label class="col-md-3" style="color:red; text-align: end;" data-bind="html:ko.vm.is_arabic()? label_ar: label_en"></label>
+        <input class="col-md-9 uk-input" type="text" data-bind="value:value" />
+    </script>
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script>
+         ko.components.register("component-01", { 
+             template:{element:`template-01`},
+             viewModel:function(params){
+                 return params.data;
+             },
+          });
+    ko.vm ={
+        is_arabic:ko.observable(localStorage.getItem("KitSysIsArabic") === "true" || (localStorage.getItem("KitSysIsArabic") == null)),
+        is_dark:ko.observable((localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches))),
+        inputName:{
+            label_ar:("<strong>الاسم:</strong>"),
+            label_en:("<strong>Name:</strong>"),
+            label:ko.observable("<strong>Name:</strong>"),
+            sLabel:{
+                isEditMode:ko.observable(0),
+                val:ko.observable("<strong>Name:</strong>"),    
+            },
+            value:ko.observable('Ahmed'),
+        },
+        inputName2:{
+            label_ar:("<strong>الاسم2:</strong>"),
+            label_en:("<strong>Name2:</strong>"),
+            label:ko.observable("<strong>Name2:</strong>"),
+            value:ko.observable('Ahmed2'),
+        },
+        items:[
+        {
+            label_ar:("<strong>الاسم:</strong>"),
+            label_en:("<strong>Name:</strong>"),
+            label:ko.observable("<strong>Name:</strong>"),
+            value:ko.observable('Ahmed'),
+            templateName:'template-001',
+        },
+        {
+            label_ar:("<strong>الجنسية:</strong>"),
+            label_en:("<strong>الجنسية:</strong>"),
+            label:ko.observable("<strong>الجنسية:</strong>"),
+            value:ko.observable('Ahmed'),
+            templateName:'template-02',
+        },
+        
+        {
+            label_ar:("<strong>الجنسية:</strong>"),
+            label_en:("<strong>الجنسية:</strong>"),
+            label:ko.observable("<strong>الجنسية:</strong>"),
+            value:ko.observable('Ahmed'),
+            templateName:'template-01',
+        },
+        
+        {
+            label_ar:("<strong>الجنسية:</strong>"),
+            label_en:("<strong>الجنسية:</strong>"),
+            label:ko.observable("<strong>الجنسية:</strong>"),
+            value:ko.observable('Ahmed'),
+            templateName:'template-03',
+        },
+        ],
+    }
+    
+    ko.vm.is_dark.subscribe((val)=>{
+        localStorage.setItem("KitSysIsDark",val);
+    });
+    ko.vm.is_arabic.subscribe((val)=>{
+        localStorage.setItem("KitSysIsArabic",val);
+    });
+
+    ko.applyBindings(ko.vm, document.getElementById("html"));
+    </script>
+</html>

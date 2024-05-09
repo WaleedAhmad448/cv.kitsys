@@ -1,0 +1,456 @@
+<html id="html" data-color-mode='auto' data-bind="attr:{'data-color-mode':(is_dark()?'dark':'light'),'data-dark-theme':(is_dark()?'dark':'light'),dir:is_arabic()?'rtl':'ltr'},css:{'kit-dark':is_dark,'uk-light':is_dark}">
+    <head>
+        <link href="./wwwroot/lib/uikit/css/uikit.min.css" rel="stylesheet" />
+        <link href="./wwwroot/bundles/libs.min.css" rel="stylesheet" />
+        <link href="./wwwroot/lib/font-awesome/css/fontawesome.min.css"rel="stylesheet"/>        
+        <link href="./wwwroot/css/site-lg.css" media="screen and (min-width: 900px)" rel="stylesheet"/>        
+        <link href="./wwwroot/lib/animate.css/animate.min.css" rel="stylesheet"/>        
+        <meta charset="utf-8"/>
+        <style>
+            
+            @media (prefers-color-scheme: dark) {
+                [data-color-mode=auto] body{
+                    background-color: var(--dark);
+                    color: var(--light);
+                }
+            }
+                 
+            body{
+                -webkit-transition: background-color 1s ease-out;
+                -moz-transition: background-color 1s ease-out;
+                -o-transition: background-color 1s ease-out;
+                transition: background-color 1s ease-out;
+            }
+            .kit-dark,.kit-dark body{
+                background-color: var(--dark);
+                color: var(--light);
+
+            }
+            .row-l{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .row{
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+    /* margin-right: -15px; */
+    /* margin-left: -15px;
+            }
+            .validationMessage{
+                color:darkred;
+                font-weight: bold;
+            }
+            :root{
+                --hsla-primary:217;
+                --hsla-success:134;
+                --hsla-warning:45;
+                --hsla-info:188;
+                --hsla-danger:354;
+                --hsla-default:217;
+                --hsla-dark:210;
+                --hsla-light:210;
+                --hsla-secondary:217;
+                --hsla-h:var(--hsla-default);
+                --hsla-s:41;
+                --hsla-l:38;
+                --hsla-a:1;
+                --rgba-r:41;
+                --rgba-g:38;
+                --rgba-b:1;
+                --lightness-threshold: 0.6;
+                --background-alpha: 0.18;
+                --perceived-lightness: 0.18;
+                --border-alpha: 0.3;
+                --perceived-lightness: calc( ((var(--rgba-r) * 0.2126) + (var(--rgba-g) * 0.7152) + (var(--rgba-b) * 0.0722)) / 255 );
+               
+                
+            }
+            /* .btn.btn-primary,
+            .btn.btn-success,
+            .btn.btn-warning,
+            .btn.btn-info,
+            .btn.btn-danger,
+            .btn.btn-dark,
+            .btn.btn-light,
+            .btn.btn-default, */
+           
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                75% {
+                    transform: rotate(360deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .icon-setting-floating{
+                border-radius: 4rem 4rem 4rem 1rem;
+                width: 3rem;
+                height: 3rem;
+                font-size: 2rem;
+            }
+            .rotate {
+                animation: spin 10s infinite;
+            }
+
+            </style>
+        <script>
+            if (localStorage.getItem("KitSysIsDark") === "true" || (localStorage.getItem("KitSysIsDark") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.getElementById("html").classList.add("bg-dark");
+                document.getElementById("html").classList.add("uk-light");
+                //comment
+                //edit
+            }
+        </script>
+         <style>
+            .add-button {
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                z-index: 100;
+            }
+        </style>
+        <!-- <script>
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                registration.unregister()
+            }});
+        </script> -->
+        <link rel="manifest" href="/wwwroot/css/manifest.webmanifest?v=0.0.3"/>
+        <script src="/sw-index.js?v=0.0.3" defer></script>
+    </head>
+    <body data-bind="attr:{style:ko.vm.colorPalette.getStyle()}">
+        <button class="add-button">Add to home screen</button>
+        
+        <div id="kit-offcanvas-icons" class="uk-modal-full" uk-modal data-bind="visible:ko.KitContext.KitIcons.showModal">
+            <div class="uk-modal-dialog" style="height:100%">
+        
+                <button class="uk-modal-close-full uk-close-large" type="button" uk-toggle="#kit-offcanvas-icons"></button>
+                <div class="row" style="height:100%">
+                    
+                   <!--ko with:ko.KitContext.KitIcons-->
+                    <div class="col-12" style="height: 100px;">
+                        <input type="text" data-bind="value:searchInput, valueUpdate:'keyup'" />
+                        <button type="button" data-bind="click:changeIcon" uk-toggle="#kit-offcanvas-icons" >Change2 Icon</button>
+                    </div>
+                    <div class="col-12 row" style="height:calc(100% - 100px);overflow: auto;">
+                        <!--ko if:show-->
+                        <!--ko foreach:getOptions-->
+                        <a class="uk-width-1-5" data-bind="visible:!(ko.KitContext.KitIcons.searchInput()&& value.indexOf(ko.KitContext.KitIcons.searchInput())==-1),enable:(ko.KitContext.KitIcons.selectedIcon()==value),click: setIcon">
+                            <div class="color-palette" data-bind="css:{'palette-active':(ko.KitContext.KitIcons.selectedIcon()==value)}, attr:{style:`--color-palette-1: ${(ko.KitContext.KitIcons.selectedIcon()==value)?'var(--primary)':'gray'};--color-palette-2: #ffffff5c;`}">
+                                <span class="color-palette-2">
+                                    <span></span>
+                                </span>
+                                <span class="color-palette-1">
+                                    <span data-bind="attr:{class:value}"></span>
+                                </span>
+                            </div>
+                            <span data-bind="html:value"></span>
+                        </a>
+                        <!--/ko-->
+                         <!-- <a data-bind="visible:visible,enable:!selected(),click: function(){ko.KitContext.KitIcons.selectedIcon(value);}">
+                                <div class="color-palette" data-bind="css:{'palette-active':selected}, attr:{style:`--color-palette-1: ${(selected())?'var(--primary)':'gray'};--color-palette-2: #ffffff5c;`}">
+                                    <span class="color-palette-2">
+                                        <span></span>
+                                    </span>
+                                    <span class="color-palette-1">
+                                        <span data-bind="attr:{class:value}"></span>
+                                    </span>
+                                </div>
+                                <span data-bind="html:value"></span>
+                            </a> -->
+                        <!--/ko-->
+                        <!-- <table id="kit-offcanvas-icons-table" class="table "  data-bind="datatable_icons:$data"></table> -->
+                    </div>
+                   <!--/ko-->
+                <div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <header uk-sticky="show-on-up: true; animation: uk-animation-slide-top;"> 
+            <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+                <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-bind="css:{'bg-dark':ko.vm.is_dark}" uk-height-viewport>
+                    <button class="uk-modal-close-full" type="button"  data-bind="css:{'bg-dark':ko.vm.is_dark}"  uk-close></button>
+                    <form class="uk-search uk-search-large" action="/index.html">
+                        <input class="uk-search-input uk-text-center" type="search" name="page" placeholder="Search" autofocus>
+                    </form>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <a class="navbar-brand" href="/index.html"><img src="./wwwroot/images/logo.png" style="max-height: 2rem;min-width: 4rem;" alt="Kit Sys Co."/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/index.html?page=1">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <div class="form-inline my-2 my-lg-0">
+                    <a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle style="max-height: 1rem;min-height: 1rem !important;"></a>
+                  </div>
+                  
+                  <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </nav>
+        </header>
+        <style>
+            .kit-uk-sticky-left{
+                left: 1rem;
+            }
+            .kit-uk-sticky-right{
+                right: 1rem;
+            }
+            
+            .uk-light .uk-icon-button {
+            background-color: #42474c;
+                /* filter: invert(1); */
+
+            }
+            .uk-light .uk-icon-button:hover {
+            background-color: #42474c;
+                filter: invert(1);
+
+            }
+        </style>
+        <!-- <div data-bind="css:{'kit-uk-sticky-left':!ko.vm.is_arabic(),'kit-uk-sticky-right':ko.vm.is_arabic()}" style="z-index: 980;position: fixed;bottom: 1rem;"> -->
+        <div data-bind="css:{'kit-uk-sticky-left':false,'kit-uk-sticky-right':true}" style="z-index: 980;position: fixed;bottom: 1rem;">
+            
+            <label class="uk-icon-button icon-setting-floating" uk-toggle="target: #kit-offcanvas-sliders" data-bind="css:{'bg-dark':!ko.vm.is_dark()}">
+                <span class="fe-settings rotate"></span>
+            </label>
+            <br/>
+            
+<div id="kit-offcanvas-sliders" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <div >
+            <div class="row">
+                    
+                <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+                                    <kit-item-icon class="col-12" params="data:{itemClass:'col-md-12'}"></kit-item-icon>
+                                </div>
+            <div>
+                <label type="button" class="btn btn-outline-dark"  uk-toggle="target: .icon-sun-moon; animation: uk-animation-fade; queued: true" >
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                    
+                    <div class="color-palette" data-bind="css:{'palette-active':!ko.vm.is_dark()}, attr:{style:`--color-palette-1: ${(ko.vm.is_dark()?'#c77e23':'lightgray')};--color-palette-2: ${(ko.vm.is_dark()?'lightgray':'#c77e23')};`}">
+                        <span class="color-palette-2">
+                            <span data-bind="css:{'fe-sun':!ko.vm.is_dark(),'fe-moon':ko.vm.is_dark()}"></span>
+                        </span>
+                        <span class="color-palette-1">
+                            <span data-bind="css:{'fe-sun':ko.vm.is_dark,'fe-moon':!ko.vm.is_dark()}"></span>
+                        </span>
+                    </div>
+                </label>
+            </div>
+            <!--ko foreach:ko.vm.colorPalette.all-->
+                <button type="button" class="btn btn-outline-dark" data-bind="enable:!(ko.vm.colorPalette.current()==$data.name),click:function(){ko.vm.colorPalette.current($data.name)}">
+                    <div class="color-palette" data-bind="css:{'palette-active':(ko.vm.colorPalette.current()==$data.name)},attr:{style:`--color-palette-1: ${$data.primary()};--color-palette-2: ${$data.secondary()};`}">
+                        <span class="color-palette-1"></span>
+                        <span class="color-palette-2"></span>
+                    </div>
+                </button>
+            <!--/ko-->
+        <div>
+    </div>
+</div>
+</div>
+</div>
+            <!-- <label class="uk-icon-button"  data-bind="css:{'bg-dark':!ko.vm.is_dark()}">
+                <input type="checkbox" data-bind="checked:is_arabic" hidden />
+                <span class="fe-globe" data-bind="attr:{'uk-tooltip':is_arabic()?'En':'ع'}"></span>
+            </label>
+            <br/> -->
+            <label class="uk-icon-button"  data-bind="css:{'bg-dark':!ko.vm.is_dark()}">
+                <input type="checkbox" data-bind="checked:is_dark" hidden />
+                <span data-bind="css:{'fe-sun':is_dark,'fe-moon':!is_dark()},attr:{'uk-tooltip':(is_dark()?(is_arabic()?'Light':'مضيء'):(is_arabic()?'Dark':'مظلم'))}"></span>
+            </label>
+        </div>
+        
+                </div>
+                <style>
+                    .IssueLabel {
+                    display: inline-block;
+                    padding: 0 7px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    white-space: nowrap;
+                    border: 1px solid transparent;
+                    border-radius: 2em;
+                }
+                    #hx_element {
+                        
+                        
+                        --label-r: 13;
+                        --label-g: 126;
+                        --label-b: 182;
+                        --label-h: 199;
+                        --label-s: 86;
+                        --label-l: 38;
+                        
+                        --label-r: 33;
+                        --label-g:150;
+                        --label-b: 243;
+                        --label-h: 217;
+                        --label-s: 41;
+                        --label-l: 36;
+                    
+                        --label-r: 63;
+                        --label-g:176;
+                        --label-b: 154;
+                        --label-h: 168;
+                        --label-s: 47;
+                        --label-l: 47;
+                    
+                        --label-r: 32;
+                        --label-g:52;
+                        --label-b: 97;
+                        --label-h: 222;
+                        --label-s: 50;
+                        --label-l: 25;
+                    
+                    
+                    margin: 1rem;
+                }
+                    .hx_element{
+                        --lightness-threshold: 0.6;
+                        --background-alpha: 0.18;
+                        --border-alpha: 0.3;
+                    }
+                    
+                    .hx_IssueLabel {
+                        --perceived-lightness: calc( ((var(--label-r) * 0.2126) + (var(--label-g) * 0.7152) + (var(--label-b) * 0.0722)) / 255 );
+                        --lightness-switch: max(0, min(calc((var(--perceived-lightness) - var(--lightness-threshold)) * -1000), 1));
+                    }
+                    .hx_IssueLabel {
+                        --lightness-threshold: 0.453;
+                        --border-threshold: 0.96;
+                        --border-alpha: max(0, min(calc((var(--perceived-lightness) - var(--border-threshold)) * 100), 1));
+                        background: rgb(var(--label-r), var(--label-g), var(--label-b));
+                        color: hsl(0, 0%, calc(var(--lightness-switch) * 100%));
+                        border-color: hsla(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) - 25) * 1%), var(--border-alpha));
+                    }
+                    .uk-light .hx_IssueLabel {
+                        --perceived-lightness: calc( ((var(--label-r) * 0.2126) + (var(--label-g) * 0.7152) + (var(--label-b) * 0.0722)) / 255 );
+                        --lightness-switch: max(0, min(calc((var(--perceived-lightness) - var(--lightness-threshold)) * -1000), 1));
+                    }
+                    .uk-light .hx_element{
+                        --lightness-threshold: 0.6;
+                        --background-alpha: 0.18;
+                        --border-alpha: 0.3;
+                        --lighten-by: calc(((var(--lightness-threshold) - var(--perceived-lightness)) * 100) * var(--lightness-switch));
+                        background: rgba(var(--label-r), var(--label-g), var(--label-b), var(--background-alpha));
+                        color: hsl(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) + var(--lighten-by)) * 1%));
+                        border-color: hsla(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) + var(--lighten-by)) * 1%), var(--border-alpha));
+
+                    }
+                    .color-palette{
+                        --color-palette-1:red;
+                        --color-palette-2:black;
+                        height: 5rem;
+                        width: 5rem;
+                        background-color: var(--color-palette-1) ;
+                        border-radius: 4rem;
+                        max-width: 5rem;
+                        max-height: 5rem;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        position: relative;
+
+                    }
+                    .palette-active .color-palette-2 {
+                        transform:  rotate(0deg);
+                    }
+                    .color-palette {
+                        transition: background-color 675ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+                    }
+                    .color-palette-1{
+                        place-items: center;
+                        display: grid;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 2rem;
+                        
+                    }
+                    .color-palette-2{
+                        top: 0px;
+                        bottom: 0px;
+                        right: 0px;
+                        margin: auto;
+                        width: 50%;
+                        height: 120%;
+                        position: absolute;
+                        border-radius: 50%;
+                        background-color: var(--color-palette-2);
+                        transform-origin: left center;
+                        transform: rotate(-35deg);
+                        transform: rotate(-400deg);
+                        /* transform: rotateX(0deg); */
+                        transition: background-color, transform 675ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+                        display: inline-flex;
+                        place-items: center;
+                        font-size: 1.5rem;
+                        padding: .5rem;
+                        /* color: black; */
+                    }
+                    
+                </style>
+            </div>
+            <style>
+                .kit-height-100{
+                    height: 100%;
+                }
+            </style>
+            <div id="kit-current-page-container" class="row">
+                <!--ko with:CurrentPage-->
+                <!--ko component:{name:componentName,params:{data:data}}-->
+                <!--/ko-->
+                <!--/ko-->
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.9.0/html-to-image.js" integrity="sha512-8GQQGLSN+MYJfxnTNZm8HPIXz9TkAMeRcadyQO/oFsk+OAHOH7uTz5dAafi1ADICwul44a3JpV2vsolsjVeVGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="./wwwroot/lib/knockout/knockout-latest.min.js"></script>
+    <script src="./wwwroot/js/html-docx.js"></script>
+    <script src="./wwwroot/lib/uikit/js/uikit.min.js"></script>
+    <script src="./wwwroot/lib/uikit/js/uikit-icons.min.js"></script>
+    <script src="./wwwroot/lib/require.js/require.min.js"></script>
+    <script>
+        const URLBase = './wwwroot/';
+        const URLComponent = URLBase+"Components/";
+        const URLLib2Component = '../Components/';
+        const URLLib2CvTemplate = '../cv-templates/';
+        const URLLibs = URLBase + "lib/";
+        const URLApi = "/api/";
+        const page = window.location.search.slice(1).split("&").map(q=>q.split('=')).reduce((a,b)=>{a[b[0]]=b[1];  return a},{page:"cv-00"}).page;
+        const Query = window.location.search.slice(1).split("&").map(q=>q.split('=')).reduce((a,b)=>{a[b[0]]=b[1];  return a},{page:"cv-00",id:"1"});
+       
+    </script>
+    <script src="./wwwroot/Components/init.js"></script>
+</html>

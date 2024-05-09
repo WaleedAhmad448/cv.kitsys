@@ -1,0 +1,107 @@
+<!--ko if:visible-->
+<div class="row" data-bind="attr:{class:($data.grid ||'col-12')}">
+
+    <div class="card">
+      <!--ko if:header.show-->
+      <div class="card-header" style="text-align:start" id="headingOne2" data-bind="attr:{id:(uniqueUiId+'-head')}">
+        <base-kit-item-head params="data:$data" uk-grid style="text-align: center;">
+      
+        <div class="uk-width-auto" style="display: flex;">
+          <button class="uk-button uk-button-link" type="button"><span uk-icon="icon: settings"></span></button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+              <!--ko foreach:$data.actions-->
+              <li><a data-bind="html:label,click:$data.click"></a></li>
+              <!--/ko-->
+              <li class="uk-nav-divider"></li>
+              <li><a><span uk-icon="icon: pencil"></span> <span>Edit Title</span></a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a><span uk-icon="icon: trash"></span> <span>Remove</span></a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a><span uk-icon="icon: copy"></span> <span>Duplicate</span></a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+        </div>
+          <button class="btn btn-link btn-block" type="button"
+          data-bind="attr:{'data-target':('#'+uniqueUiId+'-collapse'),'aria-controls':(uniqueUiId+'-collapse')}"
+          data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+            <span class="fe-chevron-down"></span>
+          </button>
+        </div>
+      </base-kit-item-head>
+      
+        
+      </div>
+      <!--/ko-->
+      <div data-bind="attr:{class:('collapse '+(header.show?'':'show')),'id':(uniqueUiId+'-collapse'),'aria-labelledby':(uniqueUiId+'-head')}"  >
+        <div class="card-body row p-1">
+          <!--ko ifnot:header.show-->
+          <div class="col-12">
+            <base-kit-item-head params="data:$data" uk-grid style="text-align: center;">
+
+          </div>
+          <!--/ko-->
+            
+            <!--ko if:$data.isSortable-->
+            <!--ko component:{name:'kit-sortable-group',params:{data:{visible:$data.visible,items:$data.items}}}-->
+            <!--/ko-->
+            <!--/ko-->
+            <!--ko ifnot:$data.isSortable-->
+            <!--ko foreach:items-->
+            <!--ko if:$data.optional&&$data.optional()<2-->
+            <!--ko component:{name:componentName,params:{data:{...$data,grid:'col-12 uk-margin-small'}}}-->
+            <!--/ko-->          
+          <!--/ko-->
+          <!--/ko-->
+          <!--/ko-->
+          <!--ko component:{name:'kit-sortable-group',params:{data:{visible:$data.visible,items:$data.citems}}}-->
+            <!--/ko-->
+          </div>
+          <div class="card-footer text-muted">
+            <div class="uk-grid-flex" uk-grid>
+             
+           <!--ko foreach:items-->
+          <!--ko if:$data.optional&&$data.optional()==2-->
+          <div class="uk-width-auto animate__animated">
+            
+            <button class="btn btn-outline-info btn-sm" data-bind="click:function(){ $data.optional(1);}">
+              <span> +</span>
+              <span style='margin: .5rem;' data-bind="html:label"></span>
+            </button>
+            
+          </div>
+          <!--/ko-->
+          <!--/ko-->
+          
+          <!--ko with:$data.config-->
+          <!--ko foreach:$data.customItems-->
+          <!--ko if:visible-->
+          <div class="uk-width-auto animate__animated">
+            
+            <button class="btn btn-outline-info btn-sm" data-bind="click:createObject">
+              <span> +</span>
+              <span style='margin: .5rem;' data-bind="html:label">اضافة حقل مخصص</span>
+            </button>
+            
+          </div>
+          <!--/ko-->
+          <!--/ko-->
+          <!--/ko-->
+          <!--ko if:$data.config&&$data.config.canAdd&&$data.config.canAdd()-->
+          <div class="uk-width-auto animate__animated">
+            
+            <button class="btn btn-outline-info btn-sm" data-bind="click:$data.config.createCustom">
+              <span> +</span>
+              <span style='margin: .5rem;'>اضافة حقل مخصص</span>
+            </button>
+            
+          </div>
+          <!--/ko-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+</div>
+<!--/ko-->

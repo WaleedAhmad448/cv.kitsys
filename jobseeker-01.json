@@ -1,0 +1,1179 @@
+{
+  "document": {
+    "id": "51d8e9ce-3f54-493b-8933-6efff4affe4f",
+    "documentTemplateId": "fcefa124-1628-48cf-8546-84eb9df1c7db",
+    "templateOptions": {},
+    "title": null,
+    "generatedTitle": "السيرة الذاتية وديع الريمي",
+    "photo": {
+      "metadata": {
+        "rotation": 0,
+        "croppedAreaPixels": { "x": 300, "y": 0, "width": 1000, "height": 1000 }
+      },
+      "keyCropped": "51d8e9ce-3f54-493b-8933-6efff4affe4f-cropped",
+      "keyOriginal": "51d8e9ce-3f54-493b-8933-6efff4affe4f",
+      "dataCropped": "IMAGE-BASE-64"
+    },
+    "content": {
+      "locale": "ar",
+      "version": "1",
+      "sections": [
+        {
+          "key": "personalDetails",
+          "fields": [
+            {
+              "key": "name",
+              "role": "value",
+              "format": "nameFormat",
+              "fieldType": "composite",
+              "subFields": [
+                {
+                  "key": "givenName",
+                  "fieldType": "text",
+                  "autocomplete": "given-name",
+                  "linkedFieldsKey": "givenName"
+                },
+                {
+                  "key": "familyName",
+                  "fieldType": "text",
+                  "autocomplete": "family-name",
+                  "linkedFieldsKey": "familyName"
+                }
+              ]
+            },
+            {
+              "key": "emailaddress",
+              "role": "value",
+              "fieldType": "text",
+              "autocomplete": "email",
+              "linkedFieldsKey": "emailaddress"
+            },
+            { "key": "headline", "role": "value", "fieldType": "text" },
+            {
+              "key": "phonenumber",
+              "role": "value",
+              "fieldType": "text",
+              "autocomplete": "tel",
+              "linkedFieldsKey": "phonenumber"
+            },
+            {
+              "key": "address",
+              "role": "value",
+              "format": "addressFormat",
+              "fieldType": "composite",
+              "subFields": [
+                {
+                  "key": "address",
+                  "fieldType": "text",
+                  "autocomplete": "street-address",
+                  "groupedFieldsKey": "address"
+                },
+                {
+                  "key": "zipcode",
+                  "fieldType": "text",
+                  "autocomplete": "postal-code",
+                  "groupedFieldsKey": "city"
+                },
+                {
+                  "key": "city",
+                  "fieldType": "text",
+                  "autocomplete": "address-level2",
+                  "linkedFieldsKey": "placeOfResidence",
+                  "groupedFieldsKey": "city"
+                }
+              ]
+            },
+            {
+              "key": "dateOfBirth",
+              "role": "value",
+              "minor": true,
+              "fieldType": "date"
+            },
+            {
+              "key": "placeOfBirth",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "driversLicense",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "gender",
+              "role": "value",
+              "minor": true,
+              "options": ["male", "female"],
+              "fieldType": "text"
+            },
+            {
+              "key": "nationality",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "civilStatus",
+              "role": "value",
+              "minor": true,
+              "options": [
+                "unmarried",
+                "livingTogether",
+                "registeredPartnership",
+                "married",
+                "divorced",
+                "widowhood"
+              ],
+              "fieldType": "text"
+            },
+            {
+              "key": "website",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "linkedin",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "feae109e-8a39-44db-99f0-ac46036067f8",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text",
+              "customFieldName": "نبذه"
+            }
+          ],
+          "movable": false,
+          "records": [
+            {
+              "key": "cd815956-9632-42b7-8ec9-822c9650d586",
+              "values": [
+                ["وديع ", "الريمي"],
+                "wadeeasaeed2@gmail.com",
+                "sanaa",
+                "00967773337607",
+                ["اليمن", "00000", "صنعاء"],
+                "1995-02-04",
+                "صنعاء",
+                "771111111",
+                "ذكر",
+                "يمني",
+                "متزوج/ متزوجة",
+                "www.tmeto.com",
+                null,
+                "كائن حي"
+              ]
+            }
+          ],
+          "repeatable": false,
+          "destroyable": false,
+          "additionalFields": true
+        },
+        {
+          "key": "employment",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "d2831762-3314-452b-aef4-80c66eda67c2",
+              "values": [
+                "رئيس قسم",
+                ["البريد اليمني", "صنعاء"],
+                ["2013-01", "present"],
+                "<p>مهندس قسم النظم والمعلومات منطقه برد صنعاء</p>"
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "educations",
+          "fields": [
+            { "key": "education", "role": "header", "fieldType": "text" },
+            {
+              "key": "school",
+              "role": "subheader",
+              "format": "schoolFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "school", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "163edd18-9535-42ff-8341-2cd4c49bf786",
+              "values": [
+                "بكلوريا",
+                ["جامعة صنعاء", "صنعاء"],
+                ["2014-01", "2018-08"],
+                "<p>بكلوريا تقنية معلومات</p>"
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "skills",
+          "fields": [
+            { "key": "skill", "role": "header", "fieldType": "text" },
+            {
+              "key": "level",
+              "role": "level",
+              "options": [
+                "beginner",
+                "moderate",
+                "good",
+                "veryGood",
+                "excellent"
+              ],
+              "fieldType": "level"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "8d95e1a3-c7f4-4f21-880d-3fb53d085f73",
+              "values": ["تصمميم", "veryGood"]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "languages",
+          "fields": [
+            { "key": "language", "role": "header", "fieldType": "text" },
+            {
+              "key": "level",
+              "role": "level",
+              "options": ["beginner", "moderate", "good", "veryGood", "fluent"],
+              "fieldType": "level"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "3ad21504-32bb-4148-8443-d9ddeb509d63",
+              "values": ["العربيه", "fluent"]
+            },
+            {
+              "key": "6dbe61c1-4cd9-4e3f-b81e-b32db91a6afa",
+              "values": ["الانجليزية", "moderate"]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "hobbies",
+          "fields": [{ "key": "hobby", "role": "header", "fieldType": "text" }],
+          "movable": true,
+          "records": [
+            {
+              "key": "ad28f33b-42c8-4774-9b60-86673a3968e2",
+              "values": ["البرمجة"]
+            },
+            {
+              "key": "a41ca9e7-d7c4-4c68-8602-40cf0fb6aec8",
+              "values": ["الشئون المالية "]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "certificates",
+          "fields": [
+            { "key": "certificate", "role": "header", "fieldType": "text" },
+            {
+              "key": "period",
+              "role": "period",
+              "fieldType": "month",
+              "presentOption": true
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "f997af0c-2ec2-499b-82cd-f46e4cf6cb62",
+              "values": ["بكلوريا تقنيه معلومات جامعه صنعاء ", "2018-08", ""]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "qualities",
+          "fields": [
+            { "key": "quality", "role": "header", "fieldType": "text" }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "a58bdb1b-712f-4e5b-91ff-296d85627bb0",
+              "values": ["الادارة"]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "profile",
+          "fields": [
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "83c2e9c6-ef01-4f8a-bc2b-739f370046da",
+              "values": [
+                "<p>هنا تكتب نبذه تعريفيه عن صاحب السيره الذاتيه</p><ul><li></li></ul>"
+              ]
+            }
+          ],
+          "repeatable": false,
+          "destroyable": true
+        },
+        {
+          "key": "courses",
+          "fields": [
+            { "key": "course", "role": "header", "fieldType": "text" },
+            {
+              "key": "period",
+              "role": "period",
+              "fieldType": "month",
+              "presentOption": true
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "31dedc5a-70f8-4978-9072-1f6227759ed9",
+              "values": ["دوره اندرويد", "present", "<p>البرمجه بلغه درت</p>"]
+            },
+            {
+              "key": "9f13e5d2-23a5-4ca4-a471-7e9fca5dbe61",
+              "values": [
+                "api asp.net",
+                "2021-06",
+                "<p>الربط بين عده واجهات وتطبيقات </p>"
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "internships",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "29a905ad-9c15-4374-84a5-7699d8a24b44",
+              "values": [
+                "رئيس قسم",
+                ["البريد", "صنعاء"],
+                ["2021-04", "present"],
+                ""
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "sideActivities",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "f60b92d1-4119-4070-84a8-e4b13786d8d0",
+              "values": [
+                "مكافحه غسيل الاموال",
+                ["البنك المركزي", "صنعاء"],
+                ["2020-04"],
+                ""
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "references",
+          "fields": [
+            { "key": "name", "role": "header", "fieldType": "text" },
+            {
+              "key": "organization",
+              "role": "subheader",
+              "format": "organizationFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "organization", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "contactDetails",
+              "role": "value",
+              "format": "contactDetailsFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "phonenumber", "fieldType": "text" },
+                { "key": "emailaddress", "fieldType": "text" }
+              ]
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "a9b67729-6a28-4da7-9450-89be3f9b4f41",
+              "values": [
+                "معدات صناعيه",
+                ["قدس للتجاره", "صنعاء"],
+                ["773332250", "wadiee24@gmail.com"]
+              ]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true,
+          "placeholder": "referencesOnRequest"
+        },
+        {
+          "key": "achievements",
+          "fields": [
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [
+            {
+              "key": "4943a7dd-38ac-41ce-8936-2554eeb37fa8",
+              "values": ["<p>كملنا الجامعه </p>"]
+            }
+          ],
+          "repeatable": false,
+          "destroyable": true
+        },
+        {
+          "key": "173aa938-85f9-41d4-915e-738826874eb0",
+          "fields": [{ "key": "title", "role": "header", "fieldType": "text" }],
+          "movable": true,
+          "records": [
+            {
+              "key": "d100bd5a-df5b-4f10-92e5-4f702904a0c8",
+              "values": ["لاله الا الله"]
+            },
+            {
+              "key": "b6dc9f4a-8724-452e-a601-5d049e603b5e",
+              "values": ["لا اله الا الله"]
+            }
+          ],
+          "repeatable": true,
+          "destroyable": true,
+          "customSectionName": ""
+        },
+        {
+          "key": "da5cdedc-141f-455f-a199-98f67aa4ee84",
+          "fields": [{ "key": "title", "role": "header", "fieldType": "text" }],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true,
+          "customSectionName": ""
+        }
+      ]
+    },
+    "documentType": "resume",
+    "textOnly": false,
+    "createdAt": "2022-03-23T15:17:43.905Z",
+    "updatedAt": "2022-04-03T20:06:42.953Z",
+    "documentConfiguration": {
+      "translationLocales": [
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "sv",
+        "tr",
+        "ar",
+        "he",
+        "zh",
+        "ru"
+      ],
+      "defaultSections": [
+        {
+          "key": "personalDetails",
+          "fields": [
+            {
+              "key": "name",
+              "role": "value",
+              "format": "nameFormat",
+              "fieldType": "composite",
+              "subFields": [
+                {
+                  "key": "givenName",
+                  "fieldType": "text",
+                  "autocomplete": "given-name",
+                  "linkedFieldsKey": "givenName"
+                },
+                {
+                  "key": "familyName",
+                  "fieldType": "text",
+                  "autocomplete": "family-name",
+                  "linkedFieldsKey": "familyName"
+                }
+              ]
+            },
+            {
+              "key": "emailaddress",
+              "role": "value",
+              "fieldType": "text",
+              "autocomplete": "email",
+              "linkedFieldsKey": "emailaddress"
+            },
+            { "key": "headline", "role": "value", "fieldType": "text" },
+            {
+              "key": "phonenumber",
+              "role": "value",
+              "fieldType": "text",
+              "autocomplete": "tel",
+              "linkedFieldsKey": "phonenumber"
+            },
+            {
+              "key": "address",
+              "role": "value",
+              "format": "addressFormat",
+              "fieldType": "composite",
+              "subFields": [
+                {
+                  "key": "address",
+                  "fieldType": "text",
+                  "autocomplete": "street-address",
+                  "groupedFieldsKey": "address"
+                },
+                {
+                  "key": "zipcode",
+                  "fieldType": "text",
+                  "autocomplete": "postal-code",
+                  "groupedFieldsKey": "city"
+                },
+                {
+                  "key": "city",
+                  "fieldType": "text",
+                  "autocomplete": "address-level2",
+                  "linkedFieldsKey": "placeOfResidence",
+                  "groupedFieldsKey": "city"
+                }
+              ]
+            },
+            {
+              "key": "dateOfBirth",
+              "role": "value",
+              "minor": true,
+              "fieldType": "date"
+            },
+            {
+              "key": "placeOfBirth",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "driversLicense",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "gender",
+              "role": "value",
+              "minor": true,
+              "options": ["male", "female"],
+              "fieldType": "text"
+            },
+            {
+              "key": "nationality",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "civilStatus",
+              "role": "value",
+              "minor": true,
+              "options": [
+                "unmarried",
+                "livingTogether",
+                "registeredPartnership",
+                "married",
+                "divorced",
+                "widowhood"
+              ],
+              "fieldType": "text"
+            },
+            {
+              "key": "website",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            },
+            {
+              "key": "linkedin",
+              "role": "value",
+              "minor": true,
+              "fieldType": "text"
+            }
+          ],
+          "movable": false,
+          "records": [],
+          "repeatable": false,
+          "destroyable": false,
+          "additionalFields": true
+        },
+        {
+          "key": "educations",
+          "fields": [
+            { "key": "education", "role": "header", "fieldType": "text" },
+            {
+              "key": "school",
+              "role": "subheader",
+              "format": "schoolFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "school", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "employment",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "skills",
+          "fields": [
+            { "key": "skill", "role": "header", "fieldType": "text" },
+            {
+              "key": "level",
+              "role": "level",
+              "options": [
+                "beginner",
+                "moderate",
+                "good",
+                "veryGood",
+                "excellent"
+              ],
+              "fieldType": "level"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "languages",
+          "fields": [
+            { "key": "language", "role": "header", "fieldType": "text" },
+            {
+              "key": "level",
+              "role": "level",
+              "options": ["beginner", "moderate", "good", "veryGood", "fluent"],
+              "fieldType": "level"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "hobbies",
+          "fields": [{ "key": "hobby", "role": "header", "fieldType": "text" }],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        }
+      ],
+      "additionalSections": [
+        {
+          "key": "profile",
+          "fields": [
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": false,
+          "destroyable": true
+        },
+        {
+          "key": "courses",
+          "fields": [
+            { "key": "course", "role": "header", "fieldType": "text" },
+            {
+              "key": "period",
+              "role": "period",
+              "fieldType": "month",
+              "presentOption": true
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "internships",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "sideActivities",
+          "fields": [
+            { "key": "position", "role": "header", "fieldType": "text" },
+            {
+              "key": "employer",
+              "role": "subheader",
+              "format": "employerFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "employer", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "references",
+          "fields": [
+            { "key": "name", "role": "header", "fieldType": "text" },
+            {
+              "key": "organization",
+              "role": "subheader",
+              "format": "organizationFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "organization", "fieldType": "text" },
+                { "key": "city", "fieldType": "text" }
+              ]
+            },
+            {
+              "key": "contactDetails",
+              "role": "value",
+              "format": "contactDetailsFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "phonenumber", "fieldType": "text" },
+                { "key": "emailaddress", "fieldType": "text" }
+              ]
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true,
+          "placeholder": "referencesOnRequest"
+        },
+        {
+          "key": "qualities",
+          "fields": [
+            { "key": "quality", "role": "header", "fieldType": "text" }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "certificates",
+          "fields": [
+            { "key": "certificate", "role": "header", "fieldType": "text" },
+            {
+              "key": "period",
+              "role": "period",
+              "fieldType": "month",
+              "presentOption": true
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true
+        },
+        {
+          "key": "achievements",
+          "fields": [
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": false,
+          "destroyable": true
+        }
+      ],
+      "customSections": [
+        {
+          "key": "customDescriptionSection",
+          "fields": [
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": false,
+          "destroyable": true,
+          "customSectionName": ""
+        },
+        {
+          "key": "customEntriesSection",
+          "fields": [
+            { "key": "title", "role": "header", "fieldType": "text" },
+            { "key": "summary", "role": "subheader", "fieldType": "text" },
+            {
+              "key": "period",
+              "role": "period",
+              "format": "periodFormat",
+              "fieldType": "composite",
+              "subFields": [
+                { "key": "startdate", "fieldType": "month" },
+                {
+                  "key": "enddate",
+                  "fieldType": "month",
+                  "presentOption": true
+                }
+              ]
+            },
+            {
+              "key": "description",
+              "role": "richtextValue",
+              "fieldType": "richtext"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true,
+          "customSectionName": ""
+        },
+        {
+          "key": "customSkillsSection",
+          "fields": [
+            { "key": "skill", "role": "header", "fieldType": "text" },
+            {
+              "key": "level",
+              "role": "level",
+              "options": [
+                "beginner",
+                "moderate",
+                "good",
+                "veryGood",
+                "excellent"
+              ],
+              "fieldType": "level"
+            }
+          ],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true,
+          "customSectionName": ""
+        },
+        {
+          "key": "customListSection",
+          "fields": [{ "key": "title", "role": "header", "fieldType": "text" }],
+          "movable": true,
+          "records": [],
+          "repeatable": true,
+          "destroyable": true,
+          "customSectionName": ""
+        }
+      ]
+    }
+  }
+}

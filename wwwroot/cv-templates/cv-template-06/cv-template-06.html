@@ -1,0 +1,404 @@
+<style>
+	.kit-cv-template-06 a {
+		color: #2287C9;
+		text-decoration: underline;
+	}
+
+	.kit-cv-template-06 a:active {
+		color: #2287C9;
+		text-decoration: underline;
+	}
+
+	.kit-cv-template-06 a:visited {
+		color: #2287C9;
+		text-decoration: underline;
+	}
+
+	.kit-cv-template-06 a:hover {
+		color: #339900;
+		text-decoration: underline;
+	}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<!-- <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css"> -->
+
+<div class="kit-cv-template-06">
+	<article class="resume-wrapper position-relative">
+		<div id="kit-print-container" class="cv-template-container " class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+			<header class="resume-header pt-4 pt-md-0">
+				<div class="media flex-column flex-md-row">
+
+					<a href="https://kitsys.co/">
+						<img src="/wwwroot/images/person.png" alt="image"
+							style="height: 220px;">
+					</a>
+					<!-- <img class="mr-3 img-fluid picture mx-auto" src="assets/images/фотощька.jpg" alt=""> -->
+					<div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+						<div class="primary-info">
+							<!--ko with:getNormalizedObj().personalInfo-->
+							<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase" data-bind="html:fullName"></h1>
+							<div class="title mb-3" data-bind="html:fields.headline"></div>
+							<!--/ko-->
+							<!--ko with:getNormalizedObj().contacts-->
+							
+							<ul class="list-unstyled">
+								<li class="mb-2"><a data-bind="attr:{href:'mailto:'+fields.email()}"><i
+									class="far fa-envelope fa-fw mr-2"
+									data-fa-transform="grow-3"></i><span data-bind="htmlLazy:fields.email,contentEditable:ko.BaseContentEditable"></span></a></li>
+									<li><a data-bind="attr:{href:'tel:'+fields.tel()}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i><span data-bind="html:fields.tel"></span></a></li>
+							</ul>
+							<!--/ko-->
+						</div>
+						<div class="secondary-info ml-md-auto mt-2">
+							<ul class="resume-social list-unstyled">
+								<li class="mb-3"><a href="https://t-do.ru/shcok7"><span
+											class="fa-container text-center mr-2"><i
+												class="fab fa-telegram-plane fa-fw"></i></span>shcok7</a></li>
+								<li class="mb-3"><a href="https://vk.com/id19720848"><span
+											class="fa-container text-center mr-2"><i
+												class="fab fa-vk fa-fw"></i></span>pspmaniys</a></li>
+								<li class="mb-3"><a href="https://behance.net/twstrblg"><span
+											class="fa-container text-center mr-2"><i
+												class="fab fa-behance fa-fw"></i></span>twstrblg</a></li>
+								<li><a href="https://psnprofiles.com/twisterblog"><span
+											class="fa-container text-center mr-2"><i
+												class="fab fa-playstation"></i></span>twisterblog</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="resume-body p-5">
+				<!--ko with:$component.getNormalizedObj().profile-->
+
+				<section class="resume-section summary-section mb-5">
+					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Profile</h2>
+					<div class="resume-section-content">
+						<p class="mb-0" data-bind="html:fields.coverLetter"></p>
+					</div>
+				</section>
+				<!--/ko-->
+				<div class="row">
+					<div class="col-lg-9">
+						<!--ko template:'cv-template-body-experiences'-->
+						<!--/ko-->
+						<!--ko template:'cv-template-body-educations'-->
+						<!--/ko-->
+						
+						<!--ko template:'cv-template-body-events'-->
+						<!--/ko-->
+						<!--ko template:'cv-template-body-voluntaries'-->
+						<!--/ko-->
+						<!--ko template:'cv-template-body-references'-->
+						<!--/ko-->
+						
+						
+						
+					</div>
+					<div class="col-lg-3">
+						<section class="resume-section skills-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Abilities</h2>
+							<div class="resume-section-content">
+								<!--ko with:$component.getNormalizedObj().skills-->
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Skills</h4>
+									<!--ko template:{name:'cv-template-nameandlevel-list',data:fields.skills}-->
+									<!--/ko-->
+								</div>
+								<!--/ko-->
+								
+								<!--ko with:$component.getNormalizedObj().skills-->
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Others</h4>
+									<!--ko template:{name:'cv-template-nameandlevel-list',data:fields.skills}-->
+									<!--/ko-->
+								</div>
+								<!--/ko-->
+								<!--ko with:$component.getNormalizedObj().hobbies-->
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Hobbies</h4>
+									<!--ko template:{name:'cv-template-names-list',data:(fields.names()||"").split(', ').map(f=>({name:f}))}-->
+									<!--/ko-->
+									
+								</div>
+								<!--/ko-->
+								<!--ko with:$component.getNormalizedObj().talents-->
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Talents</h4>
+									<!--ko template:{name:'cv-template-names-list',data:(fields.names()||"").split(', ').map(f=>({name:f}))}-->
+									<!--/ko-->
+									
+								</div>
+								<!--/ko-->
+							</div>
+						</section>
+						<!--ko template:'cv-template-educations-section'-->
+						<!--/ko-->
+						<!--ko template:'cv-template-achievements-section'-->
+						<!--/ko-->
+						
+						
+						
+						<!--ko template:'cv-template-language-section'-->
+						<!--/ko-->
+						
+						<section class="resume-section interests-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Интересуюсь</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled">
+									<li class="mb-1">Видеоиграми</li>
+									<li class="mb-1">Редактурой</li>
+									<li class="mb-1">Дизайном</li>
+								</ul>
+							</div>
+						</section>
+
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</article>
+
+
+</div>
+<script type="text/html" id="cv-template-body">
+	
+</script>
+<script type="text/html" id="cv-template-body-educations">
+	<!--ko with:$component.getNormalizedObj().educations-->
+	<section class="resume-section experience-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Educations</h2>
+		<div class="resume-section-content">
+			<div class="resume-timeline position-relative">
+				<!--ko with:fields-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:phds}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:masters}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:bachelors}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:associates}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:courses}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:schools}--><!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-body-events">
+	<!--ko with:$component.getNormalizedObj().events-->
+	<section class="resume-section experience-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Events</h2>
+		<div class="resume-section-content">
+			<div class="resume-timeline position-relative">
+				<!--ko with:fields-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:events}--><!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-body-experiences">
+	<!--ko with:$component.getNormalizedObj().experiences-->
+	<section class="resume-section experience-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Experiences</h2>
+		<div class="resume-section-content">
+			<div class="resume-timeline position-relative">
+				<!--ko with:fields-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:experiences}--><!--/ko-->
+				<!--ko template:{name:'cv-template-body-defaults',foreach:trainings}--><!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-body-voluntaries">
+	<!--ko with:$component.getNormalizedObj().voluntaries-->
+	<section class="resume-section experience-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Voluntaries</h2>
+		<div class="resume-section-content">
+			<div class="resume-timeline position-relative">
+				<!--ko with:fields-->
+				<!--ko foreach:voluntaries-->
+				<article class="resume-timeline-item position-relative pb-5">
+
+					<div class="resume-timeline-item-header mb-2">
+						<div class="d-flex flex-column flex-md-row">
+							<h3 class="resume-position-title font-weight-bold mb-1" data-bind="text:majorName"></h3>
+							<div class="resume-company-name ml-auto">
+								<span data-bind="text:orgName"></span> </div>
+						</div>
+						<div class="resume-position-time"></div>
+					</div>
+					<!--//resume-timeline-item-header-->
+					<div class="resume-timeline-item-desc" data-bind="html:description">
+					</div>
+			
+				</article>
+				<!--/ko-->
+				<!--/ko-->
+			</div>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-body-defaults">
+	<article class="resume-timeline-item position-relative pb-5">
+
+		<div class="resume-timeline-item-header mb-2">
+			<div class="d-flex flex-column flex-md-row">
+				<h3 class="resume-position-title font-weight-bold mb-1" data-bind="text:majorName"></h3>
+				<div class="resume-company-name ml-auto">
+					<span data-bind="text:orgName"></span> - <span data-bind="text:country"></span>,<span data-bind="text:city"></span></div>
+			</div>
+			<div class="resume-position-time"><span data-bind="text:sdate"></span> — <span data-bind="text:edate"></span></div>
+		</div>
+		<!--//resume-timeline-item-header-->
+		<div class="resume-timeline-item-desc" data-bind="html:description">
+		</div>
+
+	</article>
+</script>
+
+<script type="text/html" id="cv-template-language-section">
+	<!--ko with:$component.getNormalizedObj().languages-->
+	<section class="resume-section language-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Languages
+		</h2>
+		<div class="resume-section-content">
+			<ul class="list-unstyled resume-lang-list">
+				<li class="mb-2"><span class="resume-lang-name font-weight-bold" data-bind="text:fields.native"></span>
+					<small class="text-muted font-weight-normal">(Native)</small></li>
+				<!--ko foreach:fields.others-->
+					<li class="mb-2 align-middle"><span
+						class="resume-lang-name font-weight-bold" data-bind="html:name"></span> <small
+						class="text-muted font-weight-normal">(<span data-bind="html:level"></span>/10)</small></li>
+				
+				<!--/ko-->
+			</ul>
+		</div>
+	</section>
+	<!--/ko-->
+	
+</script>
+
+<script type="text/html" id="cv-template-nameandlevel-list">
+	<ul class="list-unstyled mb-4">
+		<!--ko foreach:$data-->
+		<li class="mb-2">
+			<div class="resume-skill-name" data-bind="text:name"></div>
+			<div class="progress resume-progress">
+				<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+					style="width: 75%" aria-valuenow="25" aria-valuemin="0"
+					aria-valuemax="100" data-bind="attr:{style:(`width: ${level()*10}%`)}"></div>
+			</div>
+		</li>
+		<!--/ko-->
+	</ul>
+
+</script>
+
+<script type="text/html" id="cv-template-names-list">
+	<ul class="list-inline">
+		<!--ko foreach:$data-->
+		<li class="list-inline-item"><span class="badge badge-light" data-bind="text:name"></span></li>
+		<!--/ko-->
+	</ul>
+</script>
+<script type="text/html" id="cv-template-achievements-section">
+	<!--ko with:$component.getNormalizedObj().achievements-->
+	<section class="resume-section reference-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Achievements</h2>
+		<div class="resume-section-content">
+			<ul class="list-unstyled resume-awards-list">
+				<!--ko foreach:fields.achievements-->
+				<li class="mb-2 pl-4 position-relative">
+					<i class="resume-award-icon fas fa-trophy position-absolute"
+						data-fa-transform="shrink-2"></i>
+					<div class="resume-award-name"><span data-bind="html:majorName"></span></div>
+					<div class="resume-award-desc">
+						<!-- <a href="https://www.coursera.org/account/accomplishments/verify/DPCCM39K7M8F" target="_blank">Подтверждёнными сертификатом</a> -->
+						<span data-bind="html:orgName"></span>
+						<span data-bind="html:description"></span>
+					</div>
+				</li>
+				<!--/ko-->
+			</ul>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-body-references">
+	<!--ko with:$component.getNormalizedObj().references-->
+	<section class="resume-section reference-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">References</h2>
+		<div class="resume-section-content">
+			<ul class="list-unstyled resume-awards-list">
+				<!--ko foreach:fields.references-->
+				<li class="mb-2 pl-4 position-relative">
+					<i class="resume-award-icon fas fa-trophy position-absolute"
+						data-fa-transform="shrink-2"></i>
+					<div class="resume-degree font-weight-bold" ></div>
+
+					<div class="resume-award-name">
+						<span data-bind="html:fName"></span>
+						<span data-bind="html:lName"></span>
+						<span> - </span>
+						<span data-bind="html:majorName"></span>
+						<span> - </span>
+						<span data-bind="html:orgName"></span>
+					</div>
+					<div class="resume-award-desc">
+						<ul class="list-unstyled">
+							<li class="mb-2"><a data-bind="attr:{href:'mailto:'+email()}"><i
+								class="far fa-envelope fa-fw mr-2"
+								data-fa-transform="grow-3"></i><span data-bind="html:email"></span></a></li>
+								<li><a data-bind="attr:{href:'tel:'+mobile()}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i><span data-bind="html:mobile"></span></a></li>
+						</ul>
+					</div>
+				</li>
+				<!--/ko-->
+			</ul>
+		</div>
+	</section>
+	<!--/ko-->
+</script>
+
+<script type="text/html" id="cv-template-section-defaults">
+	<li class="mb-2">
+		<div class="resume-degree font-weight-bold" data-bind="text:majorName"></div>
+		<div class="resume-degree-org"><span data-bind="text:orgName"></span> - <span data-bind="text:country"></span>,<span data-bind="text:city"></span></div>
+		<div class="resume-degree-time"><span data-bind="text:sdate"></span> — <span data-bind="text:edate"></span></div>
+	</li>
+</script>
+
+<script type="text/html" id="cv-template-educations-section">
+	<!--ko with:$component.getNormalizedObj().educations-->
+	<section class="resume-section education-section mb-5">
+		<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Educations</h2>
+		<div class="resume-section-content">
+			<ul class="list-unstyled">
+				<!--ko with:fields-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:phds}--><!--/ko-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:masters}--><!--/ko-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:bachelors}--><!--/ko-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:associates}--><!--/ko-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:courses}--><!--/ko-->
+				<!--ko template:{name:'cv-template-section-defaults',foreach:schools}--><!--/ko-->
+				<!--/ko-->
+				
+				
+			</ul>
+		</div>
+	</section>
+	<!--/ko-->
+</script>

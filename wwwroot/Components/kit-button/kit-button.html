@@ -1,0 +1,9 @@
+<div class="col-md-6" style="text-align: center" data-bind="visible:visible">
+  <button class="col-md-12 btn" data-bind="html:(ko.vm.is_arabic()? ar:en),click:click,css:{
+      'btn-primary':$data.isPrimary,
+      'btn-Default':$data.isDefault,
+      'btn-Secondary':$data.isSecondary,
+      'btn-Danger':$data.isDanger,
+      'btn-Warning':$data.isWarning,
+    }"></button>
+</div>
